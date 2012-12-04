@@ -1,0 +1,9 @@
+# Nous ne voulons pas les fichiers systèmes et des fichiers que nous pouvons re-générer.
+.DS_Store
+*~
+*.midi
+*.pdf
+*.ps
+*.sh
+*.tar.gz
+*.zip
