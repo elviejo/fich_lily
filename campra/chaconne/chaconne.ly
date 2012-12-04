@@ -1,12 +1,12 @@
 \version "2.17.6"
 
 \header {
-    title = "Les Festes Venitiennes"
-    composer = \markup \bold \center-column { "André CAMPRA" \small "(1660 - 1744)" }
- %arranger = \markup {\fontsize #2.5 "Joseph Bodin de Boismortier (1682 - 1765)" }
-    meter = \markup { \bold \fontsize #2 " Chaconne"   } 
-    tagline = \markup {  "Partition gravée avec LilyPond (http://lilypond.org)" 
-    }	    
+	title = "Les Festes Venitiennes"
+	composer = \markup \bold \center-column { "André CAMPRA" \small "(1660 - 1744)" }
+ 	%arranger = \markup {\fontsize #2.5 "Joseph Bodin de Boismortier (1682 - 1765)" }
+	meter = \markup { \bold \fontsize #2 " Chaconne"   } 
+	tagline = \markup {  "Partition gravée avec LilyPond (http://lilypond.org)" 
+	}	    
 }
 date = #(strftime "%d %m %y" (localtime (current-time)))
 
