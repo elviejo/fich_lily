@@ -35,8 +35,8 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%	La musique, mais où est le chant ?
 %%%
-recorder		= \include "recorder.ly"
-hautbois		= \include "hautbois.ly"
+recorder	= \include "recorder.ly"
+hautbois	= \include "hautbois.ly"
 violon		= \include "violon.ly"
 basson		= \include "basson.ly"
 cello		= \include "cello.ly"
@@ -50,49 +50,45 @@ clavecing	= \include "clavecing.ly"
 \score {
 	<<
 		\new StaffGroup <<
-%			{
-%				\override Score.BarNumber.break-visibility	= #end-of-line-invisible
-%				\override Score.RehearsalMark.padding	= #2.5
-%				\resetBarnum
-%			}
-			\new Staff \with{	instrumentName 		= #"Recorder" 
-					shortInstrumentName 	= #"R." }
+			{
+				\override Score.BarNumber.break-visibility	= #end-of-line-invisible
+				\override Score.RehearsalMark.padding	= #2.5
+				\resetBarnum
+			}
+			\new Staff \with {instrumentName = #"Recorder" 
+					shortInstrumentName = #"Rec." }
 				{\recorder}
-			\new Staff \with{	instrumentName 		= #"Hautbois" 
-					shortInstrumentName 	= #"H." }
-				{\hautbois} 
-			>>
-			
-		\new StaffGroup <<
-%			{
-%				\override Score.BarNumber.break-visibility	= #end-of-line-invisible
-%				\override Score.RehearsalMark.padding	= #2.5
-%				\resetBarnum
-%			}
-			\new Staff \with{	instrumentName 		= #"Violon" 
-					shortInstrumentName 	= #"V." }
+			\new Staff \with {instrumentName = #"Hautbois" 
+					shortInstrumentName = #"Htb." }
+				{\hautbois} 			
+		
+			{
+				\override Score.BarNumber.break-visibility	= #end-of-line-invisible
+				\override Score.RehearsalMark.padding	= #2.5
+				\resetBarnum
+			}
+			\new Staff \with{ instrumentName = #"Violon" 
+					shortInstrumentName 	= #"Vln." }
 				{\violon}
-			\new Staff \with{	instrumentName 		= #"Basson" 
-					shortInstrumentName 	= #"B." }
+			\new Staff \with{ instrumentName = #"Basson" 
+					shortInstrumentName  = #"Bsn." }
 				{\basson} 
-			\new Staff \with{	instrumentName 		= #"Cello" 
-					shortInstrumentName 	= #"C." }
+			\new Staff \with{ instrumentName = #"Cello" 
+					shortInstrumentName  = #"Cel." }
 				{\cello} 
 			>>
 			
 		\new PianoStaff <<
-%			{
-%				\override Score.BarNumber.break-visibility	= #end-of-line-invisible
-%				\override Score.RehearsalMark.padding	= #2.5
-%				\resetBarnum
-%			}
-			\new Staff \with{	instrumentName 		= #"Clavecin D." 
-					shortInstrumentName 	= #"Cd." }
+		
+			\new Staff \with{ instrumentName = #"Clavecin D." 
+					shortInstrumentName  = #"Cl.d." }
 				{\clavecind}
-			\new Staff \with{	instrumentName 		= #"Clavecin G." 
-					shortInstrumentName 	= #"Cg." }
+			\new Staff \with{ instrumentName = #"Clavecin G." 
+					shortInstrumentName  = #"Cl.g." }
 				{\clavecing} 
 		>>
 	>>
 }
-\layout {}
+\layout { }
+\midi { }
+

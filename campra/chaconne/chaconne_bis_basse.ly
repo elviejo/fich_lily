@@ -466,10 +466,8 @@ r2 <d g b>4 | <d g d'>2
 
 lower =
 
-
  \relative c { 
-%	 \set Staff.instrumentName = \markup { \column { "Cello" } }
-%         \set Staff.midiInstrument = "Cello"
+
          \set Staff.printKeyCancellation = ##f
   \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
   \override TextScript.padding = #2.0
@@ -570,9 +568,7 @@ lower =
   <<
     \new Voice = "mel" {  \melody }
     \new Lyrics \lyricsto mel \text
-    \new PianoStaff <<
-    	    
-    	    
+    \new PianoStaff <<	    
     	    {
          \override Score.BarNumber.break-visibility =#end-of-line-invisible
           
@@ -586,10 +582,10 @@ lower =
       \new Staff = "lower" \lower
     >>
   >>
-  \layout {
-  %  \context { \Score
-  %  \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 2)
-  %  }
+   \layout {
+    \context { \Score
+   \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 2)
+    }
   }
    
   \midi { }
