@@ -568,7 +568,9 @@ lower =
   <<
     \new Voice = "mel" {  \melody }
     \new Lyrics \lyricsto mel \text
-    \new PianoStaff <<	    
+    
+    \new PianoStaff <<	
+    	    \set PianoStaff.instrumentName = #" Clavecin"
     	    {
          \override Score.BarNumber.break-visibility =#end-of-line-invisible
           

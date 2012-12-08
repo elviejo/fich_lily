@@ -1,12 +1,11 @@
 \relative c { 
-%	 \set Staff.instrumentName = \markup { \column { "Cello" } }
-%         \set Staff.midiInstrument = "Cello"
+
          \set Staff.printKeyCancellation = ##f
   \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
   \override TextScript.padding = #2.0
   \override MultiMeasureRest.expand-limit = 1
   \once \override Staff.TimeSignature.style = #'() 
-%  \set Score.currentBarNumber = # 731
+
   
   	\time 3/4
         \clef "bass"  

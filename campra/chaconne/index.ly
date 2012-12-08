@@ -2,8 +2,7 @@
 
 \header {
 	title		= "Les Festes Venitiennes"
-	composer		= \markup \bold \center-column { "André CAMPRA" \small "(1660 - 1744)"}
-	%arranger	= \markup {\fontsize #2.5 "Joseph Bodin de Boismortier (1682 - 1765)"}
+	composer	= \markup \bold \center-column { "André CAMPRA" \small "(1660 - 1744)"}
 	meter		= \markup {\bold \fontsize #2 " Chaconne"} 
 	tagline		= \markup {"Partition gravée avec LilyPond (http://lilypond.org)"}	    
 }
@@ -19,7 +18,7 @@ date = #(strftime "%d %m %y" (localtime (current-time)))
 				} 
 			} 
 	ragged-last-bottom= #'f
-	line-width	= 185\mm
+%	line-width	= 185\mm
 }
 	
 #(set-global-staff-size 19)
@@ -42,7 +41,7 @@ basson		= \include "basson.ly"
 cello		= \include "cello.ly"
 clavecind	= \include "clavecind.ly"
 clavecing	= \include "clavecing.ly"
-
+%text		= \include "text.ly"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%	La partition
@@ -79,16 +78,18 @@ clavecing	= \include "clavecing.ly"
 			>>
 			
 		\new PianoStaff <<
-		
-			\new Staff \with{ instrumentName = #"Clavecin D." 
-					shortInstrumentName  = #"Cl.d." }
+			
+			\set PianoStaff.instrumentName = #"Clavecin"  
+				
+			\new Staff %\with{ instrumentName = #"Clavecin D." 
+		%			shortInstrumentName  = #"Cl.d." }
 				{\clavecind}
-			\new Staff \with{ instrumentName = #"Clavecin G." 
-					shortInstrumentName  = #"Cl.g." }
+			\new Staff %\with{ instrumentName = #"Clavecin G." 
+		%			shortInstrumentName  = #"Cl.g." }
 				{\clavecing} 
 		>>
 	>>
 }
 \layout { }
 \midi { }
-
+			
