@@ -1,20 +1,34 @@
-%% Identification
-\context Voice = "recorder"
 
-\relative c'' { 	 
-%	\set Staff.instrumentName = \markup { \column { "Htb / Rec." } }
-	\set Staff.instrumentName = \markup { \column { "Hautbois" } }
-	\set Staff.midiInstrument = "Oboe"
-%	\set Staff.printKeyCancellation = ##f
 
-  \once \override Staff.TimeSignature.style = #'()
- % 	\set Score.currentBarNumber = # 731
+\version "2.17.7"
+
+\context Voice = "Recorder"
+
+%resetBarnum = \context Score \applyContext % pour la numérotation des mesures
+%  #(set-bar-number-visibility 3)
+  
+\relative c'' { 
+	\set Staff.instrumentName = \markup { \column { "Recorder" } }
+	\set Staff.midiInstrument = "recorder"
+	\set Staff.shortInstrumentName =#"rec."
+	\set Staff.printKeyCancellation = ##f
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
+	\override TextScript.padding = #2.0
+	\override MultiMeasureRest.expand-limit = 1
+	\once \override Staff.TimeSignature.style = #'()
+ 
+%  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
+%  	  \resetBarnum
+%         \override  Score.BarNumber.self-alignment-X = #LEFT
+%  }
+  	
+
   	\tempo 2=55
   	\time 3/4
         \clef "treble"
         \key g \major
-        
-        r4 b8 c d e \bar ".|:" | d4 \segno a d | g, g' g | g fis8 g a fis | g4 b,8 c d e 
+         
+        r4 b8^\markup \bold "Moderato" c d e \bar ".|:" | d4 \segno a d | g, g' g | g fis8 g a fis | g4 b,8 c d e 
 %736
 	d4 a d | g, g' g | g fis8 g a fis | g4 g8 a b4 | a8 g fis-+ e d4~ 
 %741	
@@ -96,24 +110,49 @@
 	r2 g8 g | d2 d8 g | e2-+ e4 | c a d | b4-+ g g |
 	g' e a | fis-+ d d | g4. d8 d4 | e c4.-+ b8 | b4-+ d c |
 %page 223 mes. 846
-	c4 c8 c c d | b4-+ b e8 e | e4 d c | c (b4.)-+ a8 | a2 c4
-%851
-	b4. b8 c4 | d c-+ b | a-+ a4 b | c c8 c b c | a4-+ a d8 d | 
-%page 224
-	 e4 fis g | g4~ g4. g8 | g4 d8 e d4 | r8 c b8 c d4 | 
-	r8 c b c b a | r8 e' d e d c | b4 d8 e d4 | r8 c b a g fis |
-%864
-	r8 c' b c d4 | r8 e d e d c |
+	c4 c8 c c d | b4-+ b e8 e | e4 d c | c (b4.)-+ a8 | a2 
+	<<{ c4 } \\ { e,4} >>
+% partie à deux voix, mesure 	
+%121
+<<  	{b'4. b8 c4 | d c-+ b | a-+ a4 b | c c8 c b c | a4-+ a d8 d | } \\
+	{g,4. g8 a4 | b fis g | fis-+ fis g | a-+ a8 a g a | fis4-+ fis b8 b }
+>>
+
+%856 page 224 (mes. 126)
+<<	{ e4 fis g | g4~ g4. g8 | g4 d8 e d4 | r8 c b8 c d4 | r8 c b c b a } \\
+	{b4 b4. a8 | b4 (fis4.)-+ g8 | g4 r a | b4 r8 a g fis | g4 r b8 a }
+>>
+% 131
+<<	{r8 e' d e d c | b4 d8 e d4 | r8 c b c d4 | r8 c b c d4 | r8 e d e d c | } \\
+	{ g4 g fis | g r a | b r8 a g fis | g4 r g | g g fis |}
+>>
+%136 page 225
+<<	{b8 a b c d b | } \\
+	{ g8 a b c d b }	
+>>
+%137 partie commune
+		e2 e4 | e e dis | e e e | cis4. cis8 d4 |
+		
 %page 866
-	b8 a b c d b | e2 e4 | e e dis | e e e | cis4. cis8 d4 | 
+	
 	e fis g | fis-+ fis g | a a8 a g fis | e4 e fis8 fis | 
 %page 226
-	fis4 fis e | fis (e4.-+) d8 | d2 d8 c | b2-+ c4 | d c b |
-%880
-	a4 a d | b4. c8 d4 | e fis g | fis2-+  d8 d | g2 d4
-	e4 f8 e d c | d4 b d | g,4. a8 b4 | c4 a4.-+ a8
+	fis4 fis e | fis (e4.-+) d8 | d2 
+% nouvelle séquence à deux voix
+<<	{d8 c | b2-+ c4 | d c b | } \\
+	{d,8 d | g2 a4 | b a g }
+>>	
+
+%880 ou 150
+<<	{ a4 a d | b4.-+ c8 d4 | e fis g | fis2-+  d8 d | g2 d4
+		e4 f8 e d c | d4 b d | g,4. a8 b4 | c4 a4.-+ a8 | } \\
+	{fis4 d d | g4.-+a8 b4 | c a-+ g | d'2-+ d8 c | b2 b4 |
+		c4 b a | g g b | e,4. fis8 g4 | c,4 d4.-+ fis8 |  }
+>>	
 %page 227
-	g4 g b | a b8 c d4 | g, g4.-+ (fis16 g) | a2 d,4 | r g b |
+<<	{ g4 g} \\ { g4 g }
+>>	
+		b | a b8 c d4 | g, g4.-+ (fis16 g) | a2 d,4 | r g b |
 	a b8 c d4 | g, g4.-+ (fis16 g) | a2 d,4 | r g8 a b4 | e, c'8 d e4 |
 % page 228
 	a,4 d d | d8 c16 b a8 b c d | b4 g8 a b4 | e, c'8 d e4 | 
@@ -121,11 +160,23 @@
 %905
 	g8 a b c d b | c2 c4 | d d b | e e c | a4. b8 c4 |
 %page 229
-	d4 b4.-+ c8 | c2 e8 e | d2-+ d4 | e c a | b4-+ b d | 
-	d4. d8 e4 | fis g4. a8 | fis2-+ d8 d | g2 d4 | e f8 e d c 
+	d4 b4.-+ c8 | c2 
+% nouvelle séquence à 2 voix (3ème temps mes.181	
+<<	{e8 e | d2-+ d4 | e c a | b4-+ b d | d4. d8 e4 | fis g4. a8 | fis2-+ }\\ 
+	{a,8 a | a2-+ g4 | g g fis | g g b | b4. b8 cis4 | d cis4. d8 | d2 }
+>>	
+	
+	
+	d8 d | g2 d4 | e f8 e d c 
 %page 230
 	d4 b d | g,4. a8 b4 | c a4.-+ g8 | g2b8 b | c2 c8 c |
 	d2 d4 | d c4. b8 | a4-+ a d | e4. fis8 g4 | g fis4. g8 | g2. \bar "|."	
 	
 
-}
+ 
+} %fin 1er dessus
+
+
+                
+%%%%%%%%%%%%%%%%%%          fin 1er dessus       %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

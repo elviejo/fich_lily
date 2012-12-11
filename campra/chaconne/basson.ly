@@ -2,26 +2,35 @@
 
 \version "2.17.7"
 
-\context Voice = "basson"
+\context Voice = "Basson"
+
 \relative c' { 
 	\set Staff.instrumentName = \markup { \column { "Basson" } }
-	\set Staff.midiInstrument = "Bassoon"
+	\set Staff.midiInstrument = "bassoon"
+	\set Staff.shortInstrumentName =#"bsn"
 	\set Staff.printKeyCancellation = ##f
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
 	\override TextScript.padding = #2.0
 	\override MultiMeasureRest.expand-limit = 1
 	\once \override Staff.TimeSignature.style = #'()
-%	\set Score.currentBarNumber = # 731
+	
+ 
+%  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
+%  	  \resetBarnum
+%         \override  Score.BarNumber.self-alignment-X = #LEFT
+%  }
+  	
+
   		
   		\time 3/4
-  		\clef bass % alto
+  		\clef bass %alto
                 \key g \major
           	
-       r4 b4. b8 | a4-- a a | e'4 d8\< c b a\! | g4-- c a | b b4. b8 |  
+       r4 b4. b8 | a4-- a a | e'4 d8  c b a | g4-- c a | b b4. b8 |  
      
 %736
-	a4-- a a | e' d8\< c b a\! | g4-- c a | b d8\< c b g\! | a4-- d d | a2 a4 | a2 r4 | 
-	r d8\< c b g\! | a4-- d d | a2 a4 |  a2 a4 | b r2 |
+	a4-- a a | e' d8 c b a | g4-- c a | b d8 c b g | a4-- d d | a2 a4 | a2 r4 | 
+	r d8 c b g | a4-- d d | a2 a4 |  a2 a4 | b r2 |
 %748
 	b4 r2 g4-- c b8 g | d' c d e d c | b4 r2 | b4 r2 | g4 c b8 g | 
 %page 214
@@ -42,7 +51,7 @@
 %792
 	a4-- c c | d-- bes g | d'2 d4 | r d es!4~ | es c a
 %page 218
-	d8\< c bes a g4\! | d'4 d4. d8 | d4 g,8 a bes!4 | c2 a4 | d8\< c bes a g4\! |
+	d8 c bes a g4 | d'4 d4. d8 | d4 g,8 a bes!4 | c2 a4 | d8 c bes a g4 |
 %802
 	d'2 d4 | d r g\p | es2 es4 | f2 f4 | bes, bes8 c bes a |
 %page 219
@@ -57,7 +66,7 @@
 	 a2 a4 | g e! e' | a,2 a4 | b r8 b b b | a2 a4 | g e e' | a,2 a4 | b r g |
 % page 221
 	g4 r c | a r b | c d4. d8 | d4 r d | c r c | a r b! | 
-	a a4.-+ g8 | g4 b4. b8 
+	a a4.-+ g8 | g4 b4. b8 \bar "||"
 
 		
 	\time 3/4
@@ -66,7 +75,7 @@
 	e e e | d d fis | g4. g8 g4 | e c2 d4 d c |
 %page 223 - mes. 846
 	c4 c8 c c b | b4 b a8 a | a4 a a | e'2 b4 | c2 a4 | 
-	e'4. d8 c4 | b a g | d' d g | fis fis8 fis g c, | d4 d b8 b 
+	e'4. d8 c4 | b a g | d' d g | fis-+ fis8 fis g c, | d4 d b8 b 
 %page 224 - mes. 856
 	 c4 d e | d2 d4 | g, r fis' | g r d | g r b, | 
 	 c d2 | g,4 r fis' | g r d | g r b, | c d a8 a | 
@@ -86,5 +95,9 @@
 	g4. g8 g4 | fis e4. d8 | d2 d8 d | d2 d4 | c g c | b b g | g4. d8 g4 
 %page 230 mes 922
 	a4 a4.-+ a8 | b2 d8 d | c2 c8 c | 
-	g2 g4 | c c4. d8 | d4 d d | c4. c8 b4 | a a4.-+ g8 | g2. \bar "|."	
+	g2 g4 | c c4. d8 | d4 d d | c4. c8 b4 | a a4.-+ g8 | g2. \bar "|."
+	
+	
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%           fin voix 4  (basson)           %%%%%%%%%%%%%%

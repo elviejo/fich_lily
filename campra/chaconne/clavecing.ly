@@ -1,17 +1,31 @@
-\relative c { 
 
-         \set Staff.printKeyCancellation = ##f
-  \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
-  \override TextScript.padding = #2.0
-  \override MultiMeasureRest.expand-limit = 1
-  \once \override Staff.TimeSignature.style = #'() 
+  \version "2.17.7"
 
+\context Voice = "clavecing"
+
+%resetBarnum = \context Score \applyContext % pour la numérotation des mesures
+%  #(set-bar-number-visibility 3)
   
+\relative c' { 
+%	\set Staff.instrumentName = \markup { \column { "Clavecing" } }
+	\set Staff.midiInstrument = "Harpsichord"
+%	\set Staff.shortInstrumentName =#"cel."
+	\set Staff.printKeyCancellation = ##f
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
+	\override TextScript.padding = #2.0
+	\override MultiMeasureRest.expand-limit = 1
+	\once \override Staff.TimeSignature.style = #'()
+	
+	
+%  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
+%  	  \resetBarnum
+%         \override  Score.BarNumber.self-alignment-X = #LEFT
+%  }
+  	
   	\time 3/4
         \clef "bass"  
         \key g \major
-            r4 g'4. g8 | fis4 fis d | e b b | c d d, | g g'4. g8  
-       
+            r4 g4. g8 | fis4 fis d | e b b | c d d, | g g'4. g8         
 %736
 	fis4 fis d | e b b | c d d, | g g' g, | d'4. e8 fis g | a4 a,2 |
 %742
@@ -90,4 +104,6 @@
 %page 230
 	g4 g b, | e4. fis8 g4 | c, d d | g,2 g'8 g | a2 a4 |
 	b2 b4 | c a4. g8 | fis4 d b | c4. d8 e4 | c d4. d,8 | g2. \bar "|."
+	
+
 }

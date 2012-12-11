@@ -1,12 +1,25 @@
-\context Voice = "hautbois"
+\version "2.17.7"
+
+\context Voice = "Hautbois"
+
+%resetBarnum = \context Score \applyContext % pour la numérotation des mesures
+%  #(set-bar-number-visibility 3)
+  
 \relative c'' { 
-%	\set Staff.instrumentName = \markup { \column { "2è dessus" } }
-	\set Staff.instrumentName = \markup { \column { "Recorder" } }
-	\set Staff.midiInstrument = "recorder"
-%	\set Staff.printKeyCancellation = ##f
+	\set Staff.instrumentName = \markup { \column { "Hautbois" } }
+	\set Staff.midiInstrument = "oboe"
+	\set Staff.shortInstrumentName =#"ob."
+	\set Staff.printKeyCancellation = ##f
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
+	\override TextScript.padding = #2.0
+	\override MultiMeasureRest.expand-limit = 1
+	\once \override Staff.TimeSignature.style = #'()
  
-  \once \override Staff.TimeSignature.style = #'()
-%  \set Score.currentBarNumber = # 731
+%  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
+%  	  \resetBarnum
+%         \override  Score.BarNumber.self-alignment-X = #LEFT
+%  }
+  
   		
   		\time 3/4
   		\clef treble
@@ -91,5 +104,8 @@
 %190
 	b g g | e4. e8 d4 | g fis4.-+ g8 | g2 b8 b | a2 c8 c |
 %195
-	b2 b4 | g a4. d,8 | d4 fis b | g4. fis8 e4 | c' a c | b2. |	
+	b2 b4 | g a4. d,8 | d4 fis b | g4. fis8 e4 | c' a c | b2. |
+
+	
 }
+
