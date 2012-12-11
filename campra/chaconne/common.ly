@@ -3,8 +3,8 @@
 \header {
 	title		= "Les Festes Venitiennes"
 	composer	= \markup \bold \center-column { "André CAMPRA" \small "(1660 - 1744)"}
-	poet 		= \markup {\bold \fontsize #2 "Chaconne"} 
-	meter		= \markup {\center-column {"" \fontsize #6 "" "" }}
+	meter 		= \markup {\bold \fontsize #2 "Chaconne"} 
+%	meter		= \markup {\center-column {"" \fontsize #6 "" "" }}
 	tagline		= \markup {"Partition gravée avec LilyPond (http://lilypond.org)"}	    
 }
  

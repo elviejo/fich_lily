@@ -29,56 +29,43 @@ clavecing	= \include "clavecing.ly"
 				shortInstrumentName = #"Rec." }
 			{\recorder}
 			
-%		\new Staff \with {instrumentName = #"Hautbois" 
-%				shortInstrumentName = #"Htb." }
-%			{\hautbois} 			
+		\new Staff \with {instrumentName = #"Hautbois" 
+				shortInstrumentName = #"Htb." }
+			{\hautbois} 			
 	
-%		\new Staff \with{ instrumentName = #"Violon" 
-%				shortInstrumentName 	= #"Vln." }
-%			{\violon}
+		\new Staff \with{ instrumentName = #"Violon" 
+				shortInstrumentName 	= #"Vln." }
+			{\violon}
 			
-%		\new Staff \with{ instrumentName = #"Alto" 
-%				shortInstrumentName  = #"alto" }
-%			{\alto} 
+		\new Staff \with{ instrumentName = #"Alto" 
+				shortInstrumentName  = #"alto" }
+			{\alto} 
 			
-	\new Staff \with {
-		\override StaffSymbol.stencil = #(lambda (grob)
-		(let* ((staff (ly:staff-symbol::print grob))
-               (X-ext (ly:stencil-extent staff X))
-               (Y-ext (ly:stencil-extent staff Y)))
-               (set! Y-ext (cons
-            (- (car Y-ext) 0)
-            (+ (cdr Y-ext) 0)))
-         (ly:grob-set-property! grob 'layer -10)
-         (ly:stencil-add
-         (ly:make-stencil (list 'color (rgb-color 1 0.8 1) ; ce dernier chiffre indique la couleur
-         (ly:stencil-expr (ly:round-filled-box X-ext Y-ext 0))
-         X-ext Y-ext))
-         staff)))
-			}
-  		{ \basson }				
+		\new Staff \with{ instrumentName = #"Basson" 
+				shortInstrumentName  = #"Bsn" }
+			{\basson} 		
 			
 		\new Staff \with{ instrumentName = #"Cello" 
 				shortInstrumentName  = #"Cel." }
 			{\cello} 
 		>>
 		
-%		\new PianoStaff <<
+		\new PianoStaff <<
 			
-%			\set PianoStaff.instrumentName = #"Clavecin"  
+			\set PianoStaff.instrumentName = #"Clavecin"  
 				
-%			\new Staff %\with{ instrumentName = #"Clavecin D." 
+			\new Staff %\with{ instrumentName = #"Clavecin D." 
 %		%			shortInstrumentName  = #"Cl.d." }
-%				{\clavecind}
-%			\new Staff %\with{ instrumentName = #"Clavecin G." 
+				{\clavecind}
+			\new Staff %\with{ instrumentName = #"Clavecin G." 
 %		%			shortInstrumentName  = #"Cl.g." }
-%				{\clavecing} 
-%		>>
+				{\clavecing} 
+		>>
 	>>		
 
 	
 
 \layout { }
-\midi { }
+%\midi { }
 			
 } 

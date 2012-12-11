@@ -21,14 +21,6 @@
 %  }
   
 
-\relative c' { 
-	 \set Staff.instrumentName = \markup { \column { "Violon" } }
-         \set Staff.midiInstrument = "Violin"
-%         \set Staff.printKeyCancellation = ##f
-
-  \once \override Staff.TimeSignature.style = #'() 
-%  \set Score.currentBarNumber = # 731
-  
   	\time 3/4
         \clef treble  
         \key g \major
