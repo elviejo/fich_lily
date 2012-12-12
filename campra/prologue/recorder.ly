@@ -2,9 +2,7 @@
 
 \context Voice = "recorder"
 
-resetBarnum = \context Score \applyContext % pour la numérotation des mesures
-  #(set-bar-number-visibility 3)
-  
+
 \relative c'' { 
 	\set Staff.instrumentName = \markup { \column { "Recorder" } }
 	\set Staff.midiInstrument = "recorder"
@@ -14,18 +12,12 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 	\override TextScript.padding = #2.0
 	\override MultiMeasureRest.expand-limit = 1
 	\once \override Staff.TimeSignature.style = #'()
- 
-  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
-  	  \resetBarnum
-         \override  Score.BarNumber.self-alignment-X = #LEFT
-  }
-  	
-		
+	
   		\time 3/4
   		\clef treble 
                 \key bes \major
                 
-               r8 r16 d d8. c16 \stemDown bes8.-+ a16 | %\bar "|:" 
+       r8 r16 d d8. c16 \stemDown bes8.-+ a16 | %\bar "|:" 
        \repeat volta 2 {
        \stemNeutral g4 d' g | fis4. fis8 g8. a16 |
        bes4. d,8 [g8. f16] | es8. es16 es8. d16 c8. bes16 |
@@ -40,13 +32,13 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
        }     
        
        \alternative {
-      	       {d2. | r8 r16 d d8. c16 bes8. a16 \bar":|"}
-       	       { \repeat volta 2  \time 12/8 d4. r8 d c bes a g d' g fis}
+      	       {d2. | r8 r16 d d8. c16 bes8. a16}
+       	       {  \time 12/8 d4. r8 d c bes a g d' g fis}
        }       	       
 %19
 	\repeat volta 2 {
 	      
-	\bar "|:"  g a bes a g fis g a bes a g fis | 
+	 g a bes a g fis g a bes a g fis | 
 	g4 d8 d c d es f es d c bes | 
 	a4-+ d8 c bes a bes c d c bes a | 
 	bes a g bes a bes c bes c a-+ g f | 
@@ -55,7 +47,7 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 	d e f e f g f g a g a bes | a g f e f d cis b a f' g a |
 	e f g cis, d e f e d cis4  d8 |
 %27
-	d a' g fis e d g f g es-+ d c | f4. r8 r f, g4. a-+ | 
+	d a' g fis e d g f g e-+ d c | f4. r8 r f, g4. a-+ | 
 	bes c-+ d8 bes d es c es |
 %30
 	f8 d f g es g a g f d c d | es f g c, d es d c bes a4-+ bes8 |
@@ -65,7 +57,7 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 	es d c g' f e a bes a e a g |
 	fis e d a' g a fis e d g aes g |
 %36
-	f g aes g f es d c bes a! bes a | 
+	f g aes g f es d c bes a! bes g | 
 	fis a g fis e d d' c bes a4-+ g8 |
 	g4 bes8 a d a bes c bes a d a |
 %39

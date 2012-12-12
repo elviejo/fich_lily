@@ -17,7 +17,7 @@
   		\clef bass 
                 \key bes \major
                 
-       R2. \bar "|:" 
+       R2. %\bar "|:" 
        \repeat volta 2 {
         
        R2.*2 |r8 r16 g  g8. f16 es8. d16 | c8. c16 c8. d16  es8. c16
@@ -30,8 +30,7 @@
              
        }
        \alternative {
-       	       {d8. d16 d8. c16 bes8. a16 |
-       	        g4 r r \bar ":|" }
+       	       {d8. d16 d8. c16 bes8. a16 | g4 r r  }
        	       {\time 12/8 d4. r4. r2. }    
        }
        \repeat volta 2 {

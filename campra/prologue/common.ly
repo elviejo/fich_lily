@@ -22,18 +22,12 @@ date = #(strftime "%d %m %y" (localtime (current-time)))
 %	line-width	= 185\mm
 }
 	
-#(set-global-staff-size 18)
+#(set-global-staff-size 19)
 #(set-default-paper-size "a4")
 
 global = { }
-globalTempo = {  \override Score.MetronomeMark.transparent = ##t }
+globalTempo = { \override Score.MetronomeMark.transparent = ##t}
 	
 resetBarnum = \context Score \applyContext % pour la numérotation des mesures
-  #(set-bar-number-visibility 3)
-  
-    {
-         \override Score.BarNumber.break-visibility =#end-of-line-invisible
+	#(set-bar-number-visibility 2)
 
-         \resetBarnum
-         \override  Score.BarNumber.self-alignment-X = #LEFT
-  }

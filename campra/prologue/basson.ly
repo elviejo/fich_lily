@@ -2,8 +2,6 @@
 
 \context Voice = "basson"
 
-resetBarnum = \context Score \applyContext % pour la numérotation des mesures
-  #(set-bar-number-visibility 3)
   
 \relative c' { 
 	\set Staff.instrumentName = \markup { \column { "Basson" } }
@@ -15,17 +13,13 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 	\override MultiMeasureRest.expand-limit = 1
 	\once \override Staff.TimeSignature.style = #'()
  
-  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
-  	  \resetBarnum
-         \override  Score.BarNumber.self-alignment-X = #LEFT
-  }
-  	
+
 		
   		\time 3/4
   		\clef bass %alto
                 \key bes \major
                 
-       R2. \bar "|:" 
+       R2. %\bar "|:" 
        \repeat volta 2 {
         
        R2.*3 | r8 r16 g' g8. f16 es8. d16 | c4-+ d4. bes8 |
@@ -37,7 +31,7 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 	f8. f16 f8. e16 d8. c16 | bes4 a4. a8 | 
        }
        \alternative {
-       	       {a2. | R2. |\bar ":|"}
+       	       {a2. | R2. |}
        	       {\time 12/8 a4. r4. r2. }    
        }
        \repeat volta 2 {
