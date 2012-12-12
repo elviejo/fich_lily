@@ -23,7 +23,7 @@ clavecing	= \include "clavecing.ly"
 		{
 		\override Score.BarNumber.break-visibility	= #end-of-line-invisible
 		\override Score.RehearsalMark.padding	= #2.5
-			\resetBarnum
+%			\resetBarnum
 		}
 		\new Staff \with {instrumentName = #"Recorder" 
 				shortInstrumentName = #"Rec." }

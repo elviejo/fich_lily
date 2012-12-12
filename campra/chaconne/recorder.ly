@@ -117,8 +117,8 @@
 >>
 
 %856 page 224 (mes. 126)
-<<	{ e4 fis g | g4~ g4. g8 | g4 d8 e d4 | r8 c b8 c d4 | r8 c b c b a } \\
-	{b4 b4. a8 | b4 (fis4.)-+ g8 | g4 r a | b4 r8 a g fis | g4 r b8 a }
+<<	{ e4 fis g | g4 (fis4.) g8 | g4 d8 e d4 | r8 c b8 c d4 | r8 c b c b a } \\
+	{b4 b4. a8 | b4 (a4.)-+ g8 | g4 r a | b4 r8 a g fis | g4 r b8 a }
 >>
 % 131
 <<	{r8 e' d e d c | b4 d8 e d4 | r8 c b c d4 | r8 c b c d4 | r8 e d e d c | } \\
