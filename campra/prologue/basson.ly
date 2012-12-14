@@ -26,7 +26,7 @@
        a8. bes16 c4 f,4 | f2.
 %9
 	r8 r16 bes bes8. a16 bes8. c16 | d4 c c | c8. c16 c8. b16 a8. a16 | 
-	b4 a bes | a4. a'8 a8. g16 |
+	b4 b bes | a4. a'8 a8. g16 |
 %14
 	f8. f16 f8. e16 d8. c16 | bes4 a4. a8 | 
        }
