@@ -20,10 +20,15 @@ clavecing	= \include "clavecing.ly"
 \score {
 <<
 	\new StaffGroup <<
+  {        \override Score.BarNumber.break-visibility =#end-of-line-invisible
+         \resetBarnum
+         \override  Score.BarNumber.self-alignment-X = #CENTER
+  }
+		
 		{
 		\override Score.BarNumber.break-visibility	= #end-of-line-invisible
 		\override Score.RehearsalMark.padding	= #2.5
-%			\resetBarnum
+			\resetBarnum
 		}
 		\new Staff \with {instrumentName = #"Recorder" 
 				shortInstrumentName = #"Rec." }

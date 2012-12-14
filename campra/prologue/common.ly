@@ -31,3 +31,10 @@ globalTempo = { \override Score.MetronomeMark.transparent = ##t}
 resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 	#(set-bar-number-visibility 2)
 
+  {
+         \override Score.BarNumber.break-visibility =#end-of-line-invisible
+
+         \resetBarnum
+         \override  Score.BarNumber.self-alignment-X = #LEFT
+  }
+  	

@@ -106,7 +106,7 @@
 %Page 222
 	\key g \major
 	r2 g8 g | d2 d8 g | e2-+ e4 | c a d | b4-+ g g |
-	g' e a | fis-+ d d | g4. d8 d4 | e c4.-+ b8 | b4-+ d c |
+	g' e a | fis-+ d d | g4. d8 d4 | e c4.-+ b8 | b4-+ d e |
 %page 223 mes. 846
 	c4 c8 c c d | b4-+ b e8 e | e4 d c | c (b4.)-+ a8 | a2 
 	<<{ c4 } \\ { e,4} >>
@@ -117,7 +117,7 @@
 >>
 
 %856 page 224 (mes. 126)
-<<	{ e4 fis g | g4 (fis4.) g8 | g4 d8 e d4 | r8 c b8 c d4 | r8 c b c b a } \\
+<<	{ e4 fis g | g4 (fis4.) g8 | g4 d8 e d4 | r8 c b8 c d4 | r8 c b c d e } \\
 	{b4 b4. a8 | b4 (a4.)-+ g8 | g4 r a | b4 r8 a g fis | g4 r b8 a }
 >>
 % 131
