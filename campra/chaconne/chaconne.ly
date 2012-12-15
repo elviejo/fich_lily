@@ -70,7 +70,16 @@ clavecing	= \include "clavecing.ly"
 
 	
 
-\layout { }
+\layout { 	 \context { \Score
+%      \override RehearsalMark.break-align-symbols = #'(time-signature)
+%      \override RehearsalMark.self-alignment-X = #LEFT
+%      \override TimeSignature.break-align-anchor-alignment = #LEFT
+     \override  SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 2)
+     % #'base-shortest-duration permet de faire la partition plus courte.
+     % en mettant  make-moment 1 16), la partition contient plus de pages !
+   }
+  }
+}
 %\midi { }
 			
-} 
+ 

@@ -22,7 +22,7 @@ date = #(strftime "%d %m %y" (localtime (current-time)))
 %	line-width	= 185\mm
 }
 	
-#(set-global-staff-size 18)
+#(set-global-staff-size 19)
 #(set-default-paper-size "a4")
 
 global = { }
