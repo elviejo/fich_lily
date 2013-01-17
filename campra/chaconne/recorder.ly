@@ -1,12 +1,12 @@
 \version "2.17.7"
 
-\context Voice = "Recorder"
+\context Voice = "recorder"
 
 %resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 %  #(set-bar-number-visibility 3)
   
 \relative c'' { 
-	\set Staff.instrumentName = \markup { \column { "Recorder" } }
+	\set Staff.instrumentName = \markup { \column { "Flûte à bec" } }
 	\set Staff.midiInstrument = "recorder"
 	\set Staff.shortInstrumentName =#"rec."
 	\set Staff.printKeyCancellation = ##f
@@ -21,12 +21,12 @@
 %  }
   	
 
-  	\tempo 2=55
+  %	\tempo 2=55
   	\time 3/4
         \clef "treble"
         \key g \major
          
-        r4 b8^\markup \bold "Moderato" c d e \bar ".|:" | d4 \segno a d | g, g' g | g fis8 g a fis | g4 b,8 c d e 
+        r4^\markup \bold "Moderato" b8 c d e \bar ".|:" | d4 \segno a d | g, g' g | g fis8 g a fis | g4 b,8 c d e 
 %736
 	d4 a d | g, g' g | g fis8 g a fis | g4 g8 a b4 | a8 g fis-+ e d4~ 
 %741	

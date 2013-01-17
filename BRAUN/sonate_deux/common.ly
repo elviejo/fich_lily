@@ -1,9 +1,12 @@
 \version "2.17.7"
 
+\markup \vspace #4
+
+
 \header {
 	title		= "2ème sonate"
 	subtitle	= "extraite du cahier de 6 sonates pour deux bassons ou deux basses"
-	composer	= \markup \bold \center-column { "Jean Daniel BRAUN (1753 - 1795)"}
+	composer	= \markup \bold \center-column { "Jean Daniel BRAUN (1767 - 1832)"}
 %	meter 		= \markup {\bold \fontsize #2 "Largo"} 
 %	poet		= \markup {\center-column {"" \fontsize #6 "" "" }}	
 	tagline		= \markup {"Partition gravée avec LilyPond (http://lilypond.org)"}	    

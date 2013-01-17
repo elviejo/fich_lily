@@ -32,47 +32,25 @@ clavecing	= \include "clavecing.ly"
          \resetBarnum
   }
   
-  \new Staff  {\recorder }
-  
-%  \new Staff  {\hautbois }
-  
-%  \new Staff  {\violon }
- 
-%  \new Staff  {\alto }
- 	
-%  \new Staff  {\basson }
-  \new Staff \with { 
-     \override StaffSymbol.stencil = #(lambda (grob)
-        (let* ((staff (ly:staff-symbol::print grob))
-               (X-ext (ly:stencil-extent staff X))
-               (Y-ext (ly:stencil-extent staff Y)))
-         (set! Y-ext (cons
-            (- (car Y-ext) 0)
-            (+ (cdr Y-ext) 0)))
-         (ly:grob-set-property! grob 'layer -10)
-         (ly:stencil-add
-           (ly:make-stencil (list 'color (rgb-color 1 0.8 1) ; ce dernier chiffre indique la couleur
-             (ly:stencil-expr (ly:round-filled-box X-ext Y-ext 0))
-           X-ext Y-ext))
-         staff)))
-  		}
-  		{ \basson }
- 	
- \new Staff  {\cello }
+  \new Staff  {\recorder }  
+  \new Staff  {\hautbois } 
+  \new Staff  {\violon }
+  \new Staff  {\alto } 	
+  \new Staff  {\basson }
+  \new Staff  {\cello }
 	 
  	>>
 		
-%		\new PianoStaff <<
-%			%
-%			%\set PianoStaff.instrumentName = #"Clavecin"  
-%		%		%shortInstrumentName  = #"B.C."}
-%			\new Staff %\with{ instrumentName = #"Clavecin D." 
-%%		%			shortInstrumentName  = #"Cl.d." }%
-%				{\clavecind%}
-%			\new Staff %\with{ %instrumentName = #"Clavecin G." 
-%		%			sho%rtInstrumentName  = #"Cl.g." }
-%				{\clavecing%} 
-%		>>
+ 	\new PianoStaff <<			
+			\set PianoStaff.instrumentName = #"Clavecin"  
+				
+			\new Staff %\with{ instrumentName = #"Clavecin D." 
+		%			shortInstrumentName  = #"Cl.d." }
+				{\clavecind}
+			\new Staff %\with{ instrumentName = #"Clavecin G." 
+		%			shortInstrumentName  = #"Cl.g." }
+				{\clavecing} 
+		>>
 	>>
  \layout {
  	 \context { \Score
@@ -82,7 +60,12 @@ clavecing	= \include "clavecing.ly"
      \override  SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 4)
      % #'base-shortest-duration permet de faire la partition plus courte.
      % en mettant  make-moment 1 16), la partition fait 8 pages !
-   }
-  }
-}
+     
+   } %fin de \context 
+   
+  } % fin de \layout 
+  
+  \midi { }
+  
+} % fin de \score
  

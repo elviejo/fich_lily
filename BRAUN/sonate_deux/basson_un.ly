@@ -12,7 +12,7 @@
 	\override TextScript.padding = #2.0
 	\override MultiMeasureRest.expand-limit = 1
 	\once \override Staff.TimeSignature.style = #'()
-	\override Score.MetronomeMark #'outside-staff-padding = #5 % gros espace entre
+	\override Score.MetronomeMark #'outside-staff-padding = #5 % espace entre
 	% le tempo et la 1ère ligne de la partition (modifier le chiffre du padding)
 
 		
@@ -20,7 +20,7 @@
   		\clef bass %alto
                 \key c \major
                 
-                \tempo 4=60
+  %              \tempo 4=60
                 
                 \partial 4
                 
@@ -184,7 +184,7 @@
 	\key bes \major
 	\repeat volta 2 { g'4^\markup  {\halign #+0.2 \bold \italic 
 	{\fontsize #2 "Minoetto 2°"}} f2-+ | es8 c8 b c8 aes'bes  |  g4 f2-+
-	es8 d bes! c aes'4  | g4 c2   | bes4-+ a8 bes g bes   | a4 d, fis  | g2. }		
+	es8 d b! c aes'4  | g4 c2   | bes4-+ a8 bes g bes   | a4 d, fis  | g2. }		
 		
 	\repeat volta 2 { d'4 c2  |bes8 g fis g es'4  | d a8 b c d |
 	b4-+ a8 b g4  | aes4 f2-+ | g8 c, b c f4  | es4-+ d8 c d b  | c2. 

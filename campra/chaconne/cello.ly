@@ -40,7 +40,7 @@
 %771
 	r4 g' g | fis d f | e2. | d8 e d c b a | g2. | fis4 d f |
 %page 216
-	e2. | d4 d''8 e d c | b4 g g, | c c' c | c2 c4 | 
+	e2. | d4 d''8\< e d c | b4\! g\f g, | c c' c | c2 c4 | 
 %782
 	c d d, | g2 g,4 | c4. b8 a4 | d4. c8 b4 | c4 d d, |
 %page 217
@@ -86,7 +86,7 @@
 	r2 d'8 c | b2 b4 | c b a 
 %page 230
 	g4 g b, | e4. fis8 g4 | c, d d, | g2 g'8 g | a2 a4 |
-	b2 b4 | c a4. g8 | fis4 d b | c4. d8 e4 | c d4. d,8 | g2. \bar "|."       
+	b2 b4 | c a4. g8 | fis4 d b | c4. d8 e4 | c d d,| g2. \bar "|."       
 
   
   }
