@@ -16,14 +16,14 @@
   		\time 3/4
   		\clef bass 
                 \key bes \major
-                
+ 
        R2. 
        \repeat volta 2 {
         
        R2.*2 |r8 r16 g  g8. f16 es8. d16 | c8. c16 c8. d16  es8. c16
  %6
  	f4 d4. d8 | c8. bes16 f'4 f, | bes2. | r8 r16 bes' bes8. c16 bes8. a16 | 
- 	g4 c c, | f,8. f'16 f8. g16 a8. f16 | g8. g16 g8. a16 bes8. g16 |
+ 	g4 c c, | f8. f16 f8. g16 a8. f16 | g8. g16 g8. a16 bes8. g16 |
 %16
 	a8. a16 a8. g16 f8. e16 | d8. d'16 d8. c16 bes8. a16 |
 	g4 a a, |
@@ -54,8 +54,9 @@
         	{g4. r r2. }
         	{g1.   }
         }
-	\bar "|." } 	
-         
+	\bar "|." 
+} 	
+
           
        
             

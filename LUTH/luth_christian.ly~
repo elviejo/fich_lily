@@ -29,7 +29,7 @@ and therefore must be provided as a supplementary voice.
                               ,(ly:make-pitch -2 4 NATURAL)
                               ,(ly:make-pitch -2 0 NATURAL))
 
-\stringTuning <g, c f a' d' g''>
+%\stringTuning <g, c f a' d' g''>
 "viol-in-g-tuning" = #`(,(ly:make-pitch  0 4 NATURAL)
                         ,(ly:make-pitch  0 1 NATURAL)
                         ,(ly:make-pitch -1 5 NATURAL)
@@ -103,11 +103,11 @@ ViolTabLayout = \layout {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-myNotes  = \relative c'  { <d g d'>4 e f8 g a4 
+music  = \relative c'  { d4 e f8 g a4 
 			   <d b g>2. c4 
 			   d4. e8 f4 g }
 			   
-myRhythm = \relative c' {  a4 s a8 s a4       
+tablature = \relative c' {  <f d c>4 <f d c> <d c c>       
 			   a2. a4 
 			   a4. a8 a4 s }
 
@@ -115,14 +115,14 @@ myRhythm = \relative c' {  a4 s a8 s a4
   <<
     \new Staff {
       \clef treble
-      \myNotes
-    }
+      \music }
+      
     \new ViolTabStaff {
       <<
         \new ViolTabRhythmicStaff {
           %\myNotes
-          \myRhythm }
-        \new ViolTabFingeringStaff { \myNotes }
+          \tablature }
+        \new ViolTabFingeringStaff { \tablature }
       >>
     }
   >>

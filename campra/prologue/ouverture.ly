@@ -33,11 +33,11 @@ clavecing	= \include "clavecing.ly"
   }
   
   \new Staff  {\recorder }  
-  \new Staff  {\hautbois } 
-  \new Staff  {\violon }
-  \new Staff  {\alto } 	
-  \new Staff  {\basson }
-  \new Staff  {\cello }
+ % \new Staff  {\hautbois } 
+ % \new Staff  {\violon }
+ % \new Staff  {\alto } 	
+  %\new Staff  {\basson }
+ % \new Staff  {\cello }
 	 
  	>>
 		

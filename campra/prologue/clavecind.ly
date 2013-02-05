@@ -22,10 +22,7 @@
         
        	       R2.*2 | r4 <d g bes>4 <es g c>8. <f b d>16
        	       <g c es>4  <g c es>4  
-%       << {c8 <d, [bes'>16] }  \\ {<es g>4 }  >>       	       
-%	<< {<es g>4 } \\ 
-%	   {c8 <d, [bes'>16] } >>    
-%<< 	{c8 <d, [bes'>16] } \\ {<es g>4 } >>
+
 	<<	{c8 [<bes d, >16] } \\ {<es, g>4 } >>	
 %6
 	<c f a>4 <bes f'bes>4. <d f bes>8
@@ -38,7 +35,7 @@
 	<< { c8. b16 c8. d16} \\ { a8. d,16 <f a>4 } >>
 %12
 	<f a b>4 <e g b>8. <e cis'>16 <e g d'>4
-	<e g cis> <e g cis> \stemUp<f a d>8. <g c e>16 \stemNeutral
+	<e g cis> <e a cis> \stemUp<f a d>8. <g cis e>16 \stemNeutral
 	<a d f>4 <f a d> 
 	<<{d'4} \\ {g,8. <f a>16 }>>
 	<< { e'4 cis4. d8 } \\ { <bes d>4 <e,a>2 } >>
@@ -76,12 +73,7 @@
        {f4. <f bes>8 [ a8 g] f4 f8 } >>
 %32   pas sûr de cettre mesure quant à la présentation !
 <d f bes>4. % r8 r <f bes d>8 
-%<< {bes4 es8 d c b4 c8 } \\ { g8 f <es aes>8 <d g>4. } >>
-%<g es'>8 [<f d'> <es aes c>] <<{ b'4 c8} \\ { <d, g>4.} >>    % c''est à peu près bon
-	
-%<< { bes4 <g es'>8 <f d'> <es aes> <d g>4.} \\ { \stemUp c'8 b4 \stemUp c8 } >> 
-%<< {r8 r <bes d>8 bes4  <d g>4.} \\ { es8 d es\stemUp b4 c8 } >> 	
-%<< { d' bes4 es8 d c b4 c8 } \\ { <f, bes>8 g [f <es aes>8 <d g>4. } >>
+
 << {d'8 bes4 es8 d c b4 c8 } \\ { r8 r <f, bes>8 g f <es aes>8 <d g>4.} >> 
 
 %33

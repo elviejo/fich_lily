@@ -8,7 +8,7 @@
 	\set Staff.midiInstrument = "Bassoon"
 	%\set Staff.shortInstrumentName =#"bsn"
 	\set Staff.printKeyCancellation = ##f
-	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
+%	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
 	\override TextScript.padding = #2.0
 	\override MultiMeasureRest.expand-limit = 1
 	\once \override Staff.TimeSignature.style = #'()

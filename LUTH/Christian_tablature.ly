@@ -3,7 +3,7 @@
 
 %custom-tuning = \stringTuning <g' c f a d g >
 
-\stringTuning <g, c f a' d' g''>
+%\stringTuning <g, c, f a d' g'>
 "viol-in-g-tuning" = #`(,(ly:make-pitch  0 4 NATURAL)
                         ,(ly:make-pitch  0 1 NATURAL)
                         ,(ly:make-pitch -1 5 NATURAL)
@@ -37,15 +37,15 @@ tablature = {
 
 
 
-<<
+%<<
 	\new Staff {
 	\clef "treble"
 	\mynotes
 	}
-\new TabStaff \with {
-	\stringTuning 
-	\tablature				
+	\new TabStaff \with {
+		LuthTuning = \viol-in-g-tuning % <g, c f a d' g'> }
+		\tablature				
 	}
 %\tablature
 
->>
+%>>

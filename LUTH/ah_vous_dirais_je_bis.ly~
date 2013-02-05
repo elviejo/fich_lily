@@ -8,18 +8,18 @@
 	title = "Ah! Vous dirai-je, Maman!"
 	subtitle = "Arrangement à deux voix en la (trois dièses à la clé)"
 	instrument = " pour Guitare"
-	composer = "Trad."
-	poet = "Trad."
+%	composer = "Trad."
+%	poet = "Trad."
 
 	}
 
 global = {
 	\key a \major
 	\time 4/4
-	\tempo 4=80    % (ça me semble un peu lent !)
+%	\tempo 4=80    % (ça me semble un peu lent !)
 	}
 
-upper = \relative c' { \tempo 4=80 
+upper = \relative c' { 
 
 \global
 	\set Staff.midiInstrument = "acoustic guitar (nylon)"

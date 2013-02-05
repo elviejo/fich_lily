@@ -12,7 +12,7 @@
 	\override TextScript.padding = #2.0
 	\override MultiMeasureRest.expand-limit = 1
 	\once \override Staff.TimeSignature.style = #'()
-	\override Score.MetronomeMark #'outside-staff-padding = #5 % espace entre
+%	\override Score.MetronomeMark #'outside-staff-padding = #5 % espace entre
 	% le tempo et la 1ère ligne de la partition (modifier le chiffre du padding)
 
 		
@@ -108,19 +108,20 @@
 	\time 3/4	
 	\repeat volta 2 { \bar ".|:" 
 	c' 4^\markup  {\halign #+1 \bold \italic 
-	{\fontsize #2 "Poco allegro"}} _\segno g e		
+	{\fontsize #2 "Poco allegro"}} _\segno g e^\markup  {\halign #0  
+	{\fontsize #1 "Refrain"}}		
 	 c2 c'8 b 
 	a (b) b2-+ |c g4 |
 	a8 f d e f d g e c d e c |
 	f4 e2  | d8 c b a g4
 	c' g e  |c2 g'4 |
 %69
-	a8 (b) b2-+   |  c g4   |   a8 f d e f d    |   g e c d e c
+	a8 (b) b2-+   |  c (g4)  \breathe |   a8 f d e f d    |   g e c d e c
 	d4 g, b   |  c2._\markup \bold \italic "Fine" \fermata  %\bar ":||"
 	
 	}	          
  
-	e4 c g'
+	\mark \default e4 c g'
 	e c g'
 	c8 b a b g a |
 	fis2-+ \appoggiatura e8 d4 |
@@ -129,7 +130,7 @@
 	b4 g d    |  g,4 b'8 g c b   | a4 d, fis-+  |
 	g4. g8 a b\bar "||" %\segno 
 %87
-	e,4 b e  |  c b8 c a4  |  c'8 b d c b a  |  gis a b gis e4  |
+	\mark \default e,4 b e  |  c b8 c a4  |  c'8 b d c b a  |  gis a b gis e4  |
 	e'4 c a  |  c, e'8 c f e  | d4 b f  |  b, d'8 b e d
 	c4 a e  | a,4  c'8 a d c  |
 %97
@@ -145,18 +146,19 @@
 	\tempo 4=60 
 	s 2.  \repeat volta 2 {
 	g'4\segno ^\markup  {\halign #+2 \bold \italic 
-	{\fontsize #2 "Allegro"}}| g c c e, | 
+	{\fontsize #2 "Allegro"}}| g c c^\markup  {\halign #+2  
+	{\fontsize #1 "Refrain"}} e, | 
 	f2. g8 f |
 	e4 c' d, b' | c c, e g   | g c c e,  |f2. g8 f |
 	e4 c' d, b' | c2. _\markup \bold \italic "Fine" \fermata  \pageBreak}
 	
 	
-	\repeat volta 2 {	
+	%\repeat volta 2 {	
 	
-	g4 | g c c8 d e4 |
+	g4\mark #1 | g c c8 d e4 |
 %121
 	d b b g  | g c8 b a4 g  | fis8 g fis g a4 d,  | d g g b,  | c2. d8 c  |
-	b4 g' a, fis'  | g4 g, g  \bar "||" c'8 d
+	b4 g' a, fis'  | g4 g, g  \bar "||"\mark #2 c'8 d
 	e4 c c a  | 
 %%
 	a f f b8 c  |  d4 b b gis  | g e e c'  |  c d, d b'  |  b c, c a' | 
@@ -166,7 +168,7 @@
 	f d'8 c d4 f,  | e a8 g f e d c  | b4 a8 b g4 
 	_\markup {\halign #+0.5 \bold \italic "Da Capo"} \bar "||" \break
 	
-	}	     
+	%}	     
 %% Minoetto
 	\time 3/4
 	\repeat volta 2 {
@@ -183,12 +185,12 @@
 %%% Minoetto 2°
 	\key bes \major
 	\repeat volta 2 { g'4^\markup  {\halign #+0.2 \bold \italic 
-	{\fontsize #2 "Minoetto 2°"}} f2-+ | es8 c8 b c8 aes'bes  |  g4 f2-+
+	{\fontsize #2 "Minoetto 2°"}} f2-+ | \stemDown es8 c8 b c8 aes'4  | \stemNeutral g4 f2-+
 	es8 d b! c aes'4  | g4 c2   | bes4-+ a8 bes g bes   | a4 d, fis  | g2. }		
 		
 	\repeat volta 2 { d'4 c2  |bes8 g fis g es'4  | d a8 b c d |
 	b4-+ a8 b g4  | aes4 f2-+ | g8 c, b c f4  | es4-+ d8 c d b  | c2. 
-	_\markup \italic {\halign #+0.2 "Al primo" }}		
+	_\markup \italic \bold {\halign #+0.2 "Al primo" }}		
 
 		
 		

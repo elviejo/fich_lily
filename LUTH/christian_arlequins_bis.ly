@@ -153,8 +153,9 @@ ViolTabLayout = \layout {
 
 
 
-  \layout {  \ViolTabLayout  }
-  \midi {  }
+  \layout { % \ViolTabLayout  
+  }
+%  \midi {  }
 
 
 } % fin de score (ligne 98)

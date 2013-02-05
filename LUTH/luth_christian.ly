@@ -104,10 +104,13 @@ ViolTabLayout = \layout {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 music  = \relative c'  { d4 e f8 g a4 
-			   <d b g>2. c4 
+			   <g b d>2. c4 
 			   d4. e8 f4 g }
 			   
-tablature = \relative c' {  <f d c>4 <f d c> <d c c>       
+rhythmic = { c4 s c8 s c4 c2. c4 c4. c8 c4 c } 			   
+			   
+tablature = %\relative c' 
+		{  <f d c>4 <f d c> <d c c>       
 			   a2. a4 
 			   a4. a8 a4 s }
 
@@ -120,8 +123,9 @@ tablature = \relative c' {  <f d c>4 <f d c> <d c c>
     \new ViolTabStaff {
       <<
         \new ViolTabRhythmicStaff {
-          %\myNotes
-          \tablature }
+      %    \music
+      %    \tablature 
+      \rhythmic	 }
         \new ViolTabFingeringStaff { \tablature }
       >>
     }

@@ -68,9 +68,9 @@ custom-tuning = \stringTuning <d f g' c f a d g >
 
  <<% { \stringTunings = #custom-tuning}
 {
-	<f d c>4
-	<f d c>4
-	<d c f>
+	<f g g>4
+	<f a d>4
+	<d b f>
 }
 >>
 

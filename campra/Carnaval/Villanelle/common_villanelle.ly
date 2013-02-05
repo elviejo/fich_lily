@@ -1,14 +1,10 @@
 \version "2.17.7"
 
-\markup \vspace #4
-
-
 \header {
-	title		= "2ème sonate"
-	subtitle	= "extraite du cahier de 6 sonates pour deux bassons ou deux basses"
-	composer	= \markup \bold \center-column { "Jean Daniel BRAUN (1767 - 1832)"}
-%	meter 		= \markup {\bold \fontsize #2 "Largo"} 
-%	poet		= \markup {\center-column {"" \fontsize #6 "" "" }}	
+	title		= "Le Carnaval de Venise"
+	composer	= \markup \bold \center-column { "André CAMPRA" \small "(1660 - 1744)"}
+	meter 		= \markup {\bold \fontsize #2 "La Vlllanelle"} 
+%	meter		= \markup {\center-column {"" \fontsize #6 "" "" }}
 	tagline		= \markup {"Partition gravée avec LilyPond (http://lilypond.org)"}	    
 }
  
@@ -23,7 +19,11 @@ date = #(strftime "%d %m %y" (localtime (current-time)))
 				} 
 			} 
 	ragged-last-bottom= #'f
-%	line-width	= 185\mm
+%	ragged-right=#'f
+	line-width	= 180\mm
+
+	indent = 13.0\mm
+
 }
 	
 #(set-global-staff-size 18)
@@ -37,9 +37,8 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 
   {
          \override Score.BarNumber.break-visibility =#end-of-line-invisible
+
          \resetBarnum
- %        \override  Score.BarNumber.self-alignment-X = #CENTER
- %        \tweak #'color #red 
-        
+         \override  Score.BarNumber.self-alignment-X = #LEFT
   }
   	

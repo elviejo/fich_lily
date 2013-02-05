@@ -8,10 +8,10 @@
 	\set Staff.midiInstrument = "violin"
 	\set Staff.shortInstrumentName =#"vln"
 	\set Staff.printKeyCancellation = ##f
-	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
-	\override TextScript.padding = #2.0
-	\override MultiMeasureRest.expand-limit = 1
-	\once \override Staff.TimeSignature.style = #'()
+%	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
+%	\override TextScript.padding = #2.0
+%	\override MultiMeasureRest.expand-limit = 1
+%	\once \override Staff.TimeSignature.style = #'()
 
 		
   		\time 3/4
@@ -20,7 +20,7 @@
                 
                R2. |% \bar "|:" 
        \repeat volta 2 {
-       R2. | r8 r16 d, d8. c16 bes8.-+ a16 |
+       R2. | r8 r16 d d8. c16 bes8.-+ a16 |
        g4 bes8. [bes16] c8. d16 | es4 es4. es8 |
        f4 bes,4. d8 | es8. f16 f4. f8 | 
    %      es8. f16 f4. f8
