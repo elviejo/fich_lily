@@ -81,7 +81,8 @@
 	b2 g'8 g | e2 e4 | e b b | b b e | e4. e8 d4 |
 	g, d' a | d d g | d d8 d cis d | e4 e a,8 a | 
 %page 226 - mes 875
-	d4 d d | a2 a4 | a2 r4 | R2.*11  		
+	d4 d d | a2 a4 | a2 \break 
+	r4 | R2.*11  		
 %page 227 - mes 889
 	r4 d g, | a fis d | g e e' | a,2 a4 | r d g,| 
 	a fis d | g e e' | a,2 a4 | r b4. b8 | c2 c4 |

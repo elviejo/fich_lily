@@ -8,12 +8,13 @@
 \relative c'' { 
 	\set Staff.instrumentName = \markup { \column { "Flûte à bec" } }
 	\set Staff.midiInstrument = "recorder"
-	\set Staff.shortInstrumentName =#"rec."
+	\set Staff.shortInstrumentName =#"Fl.sopr."
 	\set Staff.printKeyCancellation = ##f
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
 	\override TextScript.padding = #2.0
 	\override MultiMeasureRest.expand-limit = 1
 	\once \override Staff.TimeSignature.style = #'()
+	\override  Score.TimeSignature #'break-visibility = #end-of-line-invisible
  
 %  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
 %  	  \resetBarnum
@@ -100,7 +101,7 @@
 	e fis g a fis g fis g a g a fis | b8 d, b g b g | 
 %832
 	e e' c a c a | fis16 d e fis g a g a b c d b | 
-	e fis g a fis4.-+ g8 | g4 b,8 c d e \segno \bar ":|." \pageBreak
+	e fis g a fis4.-+ g8 | g4 b,8 c d e \segno \bar ":|." %\pageBreak
 	
 	\time 3/4
 %Page 222
@@ -135,7 +136,7 @@
 	
 	e fis g | fis-+ fis g | a a8 a g fis | e4 e fis8 fis | 
 %page 226
-	fis4 fis e | fis (e4.-+) d8 | d2 
+	fis4 fis e | fis (e4.-+) d8 | d2 % \break
 % nouvelle séquence à deux voix
 <<	{d8 c | b2-+ c4 | d c b | } \\
 	{d,8 d | g2 a4 | b a g }

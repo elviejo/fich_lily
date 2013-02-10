@@ -37,15 +37,17 @@ tablature = {
 
 
 
-%<<
+<<
 	\new Staff {
 	\clef "treble"
 	\mynotes
 	}
 	\new TabStaff \with {
-		LuthTuning = \viol-in-g-tuning % <g, c f a d' g'> }
+%		LuthTuning = \viol-in-g-tuning % <g, c f a d' g'> }
+%LuthTuning = \stringTuning  <g, c f a d' g'>
 		\tablature				
 	}
-%\tablature
+\tablature
 
-%>>
+
+>>

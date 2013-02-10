@@ -79,7 +79,9 @@
 	d2 g8 g | g2 g4 | a fis b | gis e gis | e4. e8 fis4 | 
 	g a a | a a g | fis4 fis8 fis g a | a4 a a8 a |
 %145 - page 226
-	fis4 fis b | a2 a4 | fis2-+ r4 | R2.*11
+	fis4 fis b | a2 a4 | fis2-+ \bar "" \break
+	
+	r4 | R2.*11
 %159 - page 227
 	r4 b,4 d | d2 d4 | d cis4. cis8 | d2 d4 | r b g |
 	d'2 d4 | d cis4. cis8 | d2 d4 | r4 d d | c4 e4. e8 |

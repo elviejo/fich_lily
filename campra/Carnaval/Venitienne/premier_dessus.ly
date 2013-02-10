@@ -10,7 +10,7 @@
 	
 %	\indent = #10
 	
-  		\time 3/4
+  		\time 6/4
   		\clef treble 
                 \key d \major
                 

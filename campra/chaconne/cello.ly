@@ -10,11 +10,8 @@
 	\set Staff.instrumentName = \markup { \column { "Cello" } }
 	\set Staff.midiInstrument = "cello"
 	\set Staff.shortInstrumentName =#"cel."
-	\set Staff.printKeyCancellation = ##f
-	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
-	\override TextScript.padding = #2.0
-	\override MultiMeasureRest.expand-limit = 1
-	\once \override Staff.TimeSignature.style = #'()
+	\override  Score.TimeSignature #'break-visibility = #end-of-line-invisible
+	
  
 %  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
 %  	  \resetBarnum
@@ -74,7 +71,8 @@
 	r2 d,8 d | g2 g8 g | c2 c4 | a b b, | e e e | a4. g8 fis4 |
 	e4 d cis | d d e | fis fis8 fis e d | a'4 a fis8 fis
 % page 226
-	b4 b g | a2 a4 | d,2 r4 | R2.*11
+	b4 b g | a2 a4 | d,2 \break 
+	r4 | R2.*11
 % page 227	
 	r4 g'4. g8 | fis4 d f | e2. | d4. c8 b a | g2 g4 
 	fis4 d f | e2. | d4 d'' c | b4. a8 g4 | c2 c4 |

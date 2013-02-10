@@ -9,11 +9,7 @@
 %	\set Staff.instrumentName = \markup { \column { "Clavecind" } }
 	\set Staff.midiInstrument = "Harpsichord"
 %	\set Staff.shortInstrumentName =#"cel."
-	\set Staff.printKeyCancellation = ##f
-	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
-	\override TextScript.padding = #2.0
-	\override MultiMeasureRest.expand-limit = 1
-	\once \override Staff.TimeSignature.style = #'()
+
 	
 	
 %  {     \override Score.BarNumber.break-visibility =#end-of-line-invisible
@@ -201,7 +197,7 @@ r2 <d g b>4 | <d g d'>2
 %145
 	<fis b d>2 <b d e>4 
     << {<d fis>4 <cis e>2  } \\ { a2.}  >> |
-	<fis a d>2 r4
+	<fis a d>2 r4 
 	
 	R2.*11
 	

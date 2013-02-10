@@ -8,7 +8,7 @@
 \relative c'' { 
 	\set Staff.instrumentName = \markup { \column { "Hautbois" } }
 	\set Staff.midiInstrument = "oboe"
-	\set Staff.shortInstrumentName =#"ob."
+	\set Staff.shortInstrumentName =#"htb."
 	\set Staff.printKeyCancellation = ##f
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
 	\override TextScript.padding = #2.0
@@ -88,7 +88,8 @@
 %141
 	cis d e | d d cis | d d8 d e fis | cis4 cis cis8 cis |
 %145
-	d4 d d | d (cis4.) d8 | d2 r4 R2.*11 | 	
+	d4 d d | d (cis4.) d8 | d2 
+	r4 R2.*11 | 	
 %159
 	r4 d, d | d2 d4 | e4 e4.-+ (d16 e) | fis4 d2 | r4 d d  |
 %164
