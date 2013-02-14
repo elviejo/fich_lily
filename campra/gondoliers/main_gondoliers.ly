@@ -1,17 +1,20 @@
-\include "common.ly"  %%reprend tout ce qui est général aux parties séparées
+\include "common_gondoliers.ly"  %%reprend tout ce qui est général aux parties séparées
 	%%  et à la "directrice" : définition du papier, des headers, etc.
 
+%\include "bgcolor.ly"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%	La musique, 
 
-bohemienne	= \include "bohemienne.ly"
-choeur		= \include "choeur.ly"
-esclavon	= \include "esclavon.ly"
-premier_dessus	= \include "premier_dessus.ly"
-haute_contre	= \include "haute_contre.ly"
-taille		= \include "taille.ly"
-quinte		= \include "quinte.ly"
-basse		= \include "basse.ly"
+%choeur		= \include "choeur_chaconne.ly"
+recorder	= \include "recorder_gondoliers.ly"
+hautbois	= \include "haute_contre_gondoliers.ly"
+taille		= \include "taille_gondoliers.ly"
+%alto		= \include "alto.ly"
+basson		= \include "quinte_gondoliers.ly"
+cello		= \include "cello_gondoliers.ly"
+%clavecind	= \include "clavecind.ly"
+%clavecing	= \include "clavecing.ly"
+%violon		= \include "violon.ly"
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,36 +23,24 @@ basse		= \include "basse.ly"
   
 \score {
 	
-  <<	  	  
-  \new StaffGroup <<
-    {    \override Score.BarNumber.break-visibility =#end-of-line-invisible
-         \resetBarnum
-         \override  Score.BarNumber.self-alignment-X = #LEFT
-         \override Score.RehearsalMark.padding = #2.5
-    }
-  	
- \new Voice = "one"  {
-  		 	 \autoBeamOff
-  		 \bohemienne }
-  		 \new Lyrics \lyricsto "one" \texte_one   
-   
- \new Voice = "two"  {
-  		 	 \autoBeamOff
-  		 \choeur }
-  		 \new Lyrics \lyricsto "two" \texte_two	
-  		 
- \new Voice = "three"  {
-  %  \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 4)
-  		 	 \autoBeamOff
-  		 \esclavon }
-  		 \new Lyrics \lyricsto "three" \texte_three	
+  <<  	   \new StaffGroup <<
+  
+  	\include "améliorations.ly"
+  	  
+% \new Voice = "one"  {
+%  		 	 \autoBeamOff
+%  		 \choeur }
+%  		 \new Lyrics \lyricsto "one" \texte_one   	
 
-  \new Staff  {\premier_dessus }  
-  \new Staff  {\haute_contre } 
-  \new Staff  {\taille} 
-  \new Staff  {\quinte} 
+  \new Staff {\recorder } %\bgcolor "(rgb-color 1 0.8 0.6)"\recorder }
+  \new Staff  {\hautbois }  
+  \new Staff  {\taille}
+%  \new Staff  {\alto} 
+  \new Staff  {\basson } %\bgcolor "(rgb-color 1 0.8 1.6)"\basson } 
+  \new Staff  {\cello} 
+
 %  \new Staff  {\basse } 		 
- % 	 >> 
+  	 >> 
    
 % \new Staff \with { %% colorisation de cette portée
 %     \override StaffSymbol.stencil = #(lambda (grob)
@@ -69,13 +60,14 @@ basse		= \include "basse.ly"
 %  		{ \quinte }
 
  
- \new Staff  {\basse }
->>
+% \new Staff  {\basse }
+%>>
 
 	
 		
- %	\new PianoStaff <<			
+%	\new PianoStaff <<			
 %			\set PianoStaff.instrumentName = #"Clavecin"  
+%				\set PianoStaff.shortInstrumentName =#"B.C."
 %				
 %			\new Staff %\with{ instrumentName = #"Clavecin D." 
 %		%			shortInstrumentName  = #"Cl.d." }
@@ -83,15 +75,16 @@ basse		= \include "basse.ly"
 %			\new Staff %\with{ instrumentName = #"Clavecin G." 
 %		%			shortInstrumentName  = #"Cl.g." }
 %				{\clavecing} 
-%		>>
-	
+ %		>>
 	
 >>	
+	
 \layout {
 	\context {	\RemoveEmptyStaffContext
 	\override VerticalAxisGroup #'remove-first = ##t		
  	\once \override Staff.TimeSignature #'stencil = ##f	
- 	\override  SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 4)	   
+ 	\override  SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 32)
+ 	\override  Score.TimeSignature #'break-visibility = #end-of-line-invisible
 	} %fin de ce \context
 	
 	
@@ -103,7 +96,7 @@ basse		= \include "basse.ly"
 }% fin de \layout
 
   
-%  \midi { }
+% \midi { }
   
 } % fin de \score
  

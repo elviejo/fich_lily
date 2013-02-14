@@ -1,60 +1,17 @@
-\include "common_chaconne.ly"  %%reprend tout ce qui est général aux parties séparées
+\include "common.ly"  %%reprend tout ce qui est général aux parties séparées
 	%%  et à la "directrice" : définition du papier, des headers, etc.
-	bgcolor =
-#(define-music-function (parser location color) (string?)
-#{\override Staff.StaffSymbol $'stencil =
-$(lambda (grob)
-(let*
-(
-(staff
-(ly:staff-symbol::print grob)
-)
-(X-ext
-(ly:stencil-extent staff X)
-)
-(Y-ext
-(ly:stencil-extent staff Y)
-)
-)
-(set! Y-ext
-(cons
-(- (car Y-ext) 3)
-(+ (cdr Y-ext) 3)
-)
-)
-(ly:grob-set-property! grob 'layer -10)
-(ly:stencil-add
-(ly:make-stencil
-(list 'color (eval-string color)
-(ly:stencil-expr
-(ly:round-filled-box X-ext Y-ext 0)
-)
-X-ext Y-ext
-)
-)
-staff
-)
-)
-)
-#}
-)
-
-
-
-	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%	La musique, 
 
-choeur		= \include "choeur_chaconne.ly"
-recorder	= \include "recorder.ly"
-hautbois	= \include "hautbois.ly"
-alto		= \include "alto.ly"
-basson		= \include "basson.ly"
-cello		= \include "cello.ly"
-clavecind	= \include "clavecind.ly"
-clavecing	= \include "clavecing.ly"
-violon		= \include "violon.ly"
+bohemienne	= \include "bohemienne.ly"
+choeur		= \include "choeur.ly"
+esclavon	= \include "esclavon.ly"
+premier_dessus	= \include "premier_dessus.ly"
+haute_contre	= \include "haute_contre.ly"
+taille		= \include "taille.ly"
+quinte		= \include "quinte.ly"
+basse		= \include "basse.ly"
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,16 +30,24 @@ violon		= \include "violon.ly"
   	
  \new Voice = "one"  {
   		 	 \autoBeamOff
+  		 \bohemienne }
+  		 \new Lyrics \lyricsto "one" \texte_one   
+   
+ \new Voice = "two"  {
+  		 	 \autoBeamOff
   		 \choeur }
-  		 \new Lyrics \lyricsto "one" \texte_one   	
+  		 \new Lyrics \lyricsto "two" \texte_two	
+  		 
+ \new Voice = "three"  {
+  %  \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 4)
+  		 	 \autoBeamOff
+  		 \esclavon }
+  		 \new Lyrics \lyricsto "three" \texte_three	
 
-  \new Staff  {\recorder }
-  \new Staff  {\hautbois }  
-  \new Staff  {\violon}
-%  \new Staff  {\alto} 
-  \new Staff  {\basson } 
-  \new Staff  {\cello} 
-
+  \new Staff  {\premier_dessus }  
+  \new Staff  {\haute_contre } 
+  \new Staff  {\taille} 
+  \new Staff  {\quinte} 
 %  \new Staff  {\basse } 		 
  % 	 >> 
    
@@ -104,37 +69,40 @@ violon		= \include "violon.ly"
 %  		{ \quinte }
 
  
-% \new Staff  {\basse }
+ \new Staff  {\basse }
 >>
 
 	
 		
-	\new PianoStaff <<			
-			\set PianoStaff.instrumentName = #"Clavecin"  
-				\set PianoStaff.shortInstrumentName =#"B.C."
-				
-			\new Staff %\with{ instrumentName = #"Clavecin D." 
-		%			shortInstrumentName  = #"Cl.d." }
-				{\clavecind}
-			\new Staff %\with{ instrumentName = #"Clavecin G." 
-		%			shortInstrumentName  = #"Cl.g." }
-				{\clavecing} 
- 		>>
+ %	\new PianoStaff <<			
+%			\set PianoStaff.instrumentName = #"Clavecin"  
+%				
+%			\new Staff %\with{ instrumentName = #"Clavecin D." 
+%		%			shortInstrumentName  = #"Cl.d." }
+%				{\clavecind}
+%			\new Staff %\with{ instrumentName = #"Clavecin G." 
+%		%			shortInstrumentName  = #"Cl.g." }
+%				{\clavecing} 
+%		>>
 	
 	
 >>	
 \layout {
 	\context {	\RemoveEmptyStaffContext
 	\override VerticalAxisGroup #'remove-first = ##t		
- 	\once \override Staff.TimeSignature #'stencil = ##f	
- 	\override  SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 32)
- 	\override  Score.TimeSignature #'break-visibility = #end-of-line-invisible
+ 	\once \override Staff.TimeSignature #'stencil = ##f
+ 	\override  SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 4)	   
 	} %fin de ce \context
 	
 	
 \context { \Score   % les 2 lignes qui suivent réduisent l'espace entre les portées
     \override StaffGrouper.staff-staff-spacing.padding = #3
     \override StaffGrouper.staff-staff-spacing.basic-distance = #1
+    
+    
+}
+   \context   { \Staff \override TimeSignature #'style = #'single-digit  
+   	   
   	} %fin de ce \context	
 
 }% fin de \layout
