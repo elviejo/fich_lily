@@ -39,8 +39,7 @@
 	aes2 g-+ | f4.-+ g8 aes4 g | f-+ es f d | es2. g4 | f2 es | d4.-+ f8 es4 d
 %293
 	c4 es d c | b2-+ g4 g' | f2-+ g | c,4. b8 c4 d | es2 d2-+ | c2. \bar ":|." \break
-                
-                
+                            
                 
 		}         
 

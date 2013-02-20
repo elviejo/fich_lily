@@ -40,32 +40,32 @@ soprano		= \include "soprano_villanelle.ly"
   		 \soprano }
   		 \new Lyrics \lyricsto "two" \texte		 
   
-%  \new Staff  {\flute}
+  \new Staff  {\flute}
   \new Staff  {\premier_dessus }  
-%  \new Staff  {\haute_contre } 
-%  \new Staff  {\taille} 
-%  \new Staff  {\quinte}  	
+  \new Staff  {\haute_contre } 
+  \new Staff  {\taille} 
+  \new Staff  {\quinte}  	
 %  \new Staff  {\basse } 		 
-  	 >> 
+  	 
    
-  \new Staff \with { %% colorisation de cette portée
-     \override StaffSymbol.stencil = #(lambda (grob)
-        (let* ((staff (ly:staff-symbol::print grob))
-               (X-ext (ly:stencil-extent staff X))
-               (Y-ext (ly:stencil-extent staff Y)))
-         (set! Y-ext (cons
-            (- (car Y-ext) 0)
-            (+ (cdr Y-ext) 0)))
-         (ly:grob-set-property! grob 'layer -10)
-         (ly:stencil-add
-           (ly:make-stencil (list 'color (rgb-color 1 0.8 0.6)
-             (ly:stencil-expr (ly:round-filled-box X-ext Y-ext 0))
-           X-ext Y-ext))
-         staff)))
-  		}
-  		{ \quinte }
+%  \new Staff \with { %% colorisation de cette portée
+%     \override StaffSymbol.stencil = #(lambda (grob)
+%        (let* ((staff (ly:staff-symbol::print grob))
+%               (X-ext (ly:stencil-extent staff X))
+%               (Y-ext (ly:stencil-extent staff Y)))
+%         (set! Y-ext (cons
+%            (- (car Y-ext) 0)
+%            (+ (cdr Y-ext) 0)))
+%         (ly:grob-set-property! grob 'layer -10)
+%         (ly:stencil-add
+%           (ly:make-stencil (list 'color (rgb-color 1 0.8 0.6)
+%             (ly:stencil-expr (ly:round-filled-box X-ext Y-ext 0))
+%           X-ext Y-ext))
+%         staff)))
+%  		}
+%  		{ \quinte }
 \new Staff  {\basse } 
-%>>
+>>
 
 	
 		
@@ -89,8 +89,10 @@ soprano		= \include "soprano_villanelle.ly"
  	 \once \override Staff.TimeSignature #'stencil = ##f	
  	 \override  SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 4)
  	 \override VerticalAxisGroup #'remove-first = ##t
+ 	 \override TimeSignature #'style = #'single-digit
  	} 
- 	 
+ 
+    
    
   } % fin de \layout 
   

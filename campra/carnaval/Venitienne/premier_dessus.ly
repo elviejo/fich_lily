@@ -47,7 +47,7 @@
 	d2 fis4 e2-+ d4
 %314
 	cis2 b4 a4. b8 cis4 |
-	d2\segno \bar "||" \break
+	d2 \bar "||" \break
 
 a4^ \markup \box {\fontsize #2 {"2e Couplet"}} b2 cis4
 	d2 a4 b2 cis4 | 
@@ -60,7 +60,7 @@ a4^ \markup \box {\fontsize #2 {"2e Couplet"}} b2 cis4
 	b4. a8 g4 fis2-+ e4 |
 	e2 a,4 a4. b8 cis4 | 
 	d2 b4 b4. cis8 d4 |
-	e2 \segno \bar "||"s s %\break
+	e2\segno  \bar "||"s s %\break
 %	\mark \markup   {\musicglyph #"scripts.segno"} \bar "||"
 
 	R1.*7 

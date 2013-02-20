@@ -1,17 +1,17 @@
-\include "common_gondoliers.ly" %%reprend tout ce qui est général aux parties séparées
+\include "common.ly" %%reprend tout ce qui est général aux parties séparées
 %% et à la "directrice" : définition du papier, des headers, etc.
 
 %\include "bgcolor.ly"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% La musique,
 
-%choeur = \include "choeur_chaconne.ly"
-recorder 	= \include "dessus_gondoliers.ly"
-hautbois 	= \include "hautbois_gondoliers.ly"
-taille 		= \include "violon_gondoliers.ly"
+soprano 	= \include "soprano.ly"
+recorder 	= \include "recorder.ly"
+hautbois 	= \include "hautbois.ly"
+violon 		= \include "violon.ly"
 %alto = \include "alto.ly"
-basson 		= \include "quinte_gondoliers.ly"
-cello 		= \include "cello_gondoliers.ly"
+basson 		= \include "basson.ly"
+cello 		= \include "cello.ly"
 %clavecind = \include "clavecind.ly"
 %clavecing = \include "clavecing.ly"
 %violon = \include "violon.ly"
@@ -27,14 +27,14 @@ cello 		= \include "cello_gondoliers.ly"
   
    \include "améliorations.ly"
   
-% \new Voice = "one" {
-% \autoBeamOff
-% \choeur }
-% \new Lyrics \lyricsto "one" \texte_one
+ \new Voice = "soprano" {
+ \autoBeamOff
+ \soprano }
+ \new Lyrics \lyricsto "soprano" \texte_one
 
   \new Staff {\recorder } %\bgcolor "(rgb-color 1 0.8 0.6)"\recorder }
   \new Staff {\hautbois }
-  \new Staff {\taille}
+  \new Staff {\violon}
 % \new Staff {\alto}
   \new Staff {\basson } %\bgcolor "(rgb-color 1 0.8 1.6)"\basson }
   \new Staff {\cello}
@@ -82,9 +82,7 @@ cello 		= \include "cello_gondoliers.ly"
 \layout {
 \context { \RemoveEmptyStaffContext
 \override VerticalAxisGroup #'remove-first = ##t
-%  \once \override Staff.TimeSignature #'stencil = ##f
-%  \override SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 32)
-%  \override Score.TimeSignature #'break-visibility = #end-of-line-invisible
+
 } %fin de ce \context
 
 
@@ -100,6 +98,6 @@ cello 		= \include "cello_gondoliers.ly"
 }% fin de \layout
 
   
-% \midi { }
+ \midi { }
   
 } % fin de \score

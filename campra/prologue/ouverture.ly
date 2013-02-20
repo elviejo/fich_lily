@@ -5,7 +5,7 @@
 %%%%%%	La musique, 
 recorder	= \include "recorder.ly"
 hautbois	= \include "hautbois.ly"
-violon		= \include "violon.ly"
+%violon		= \include "violon.ly"
 alto		= \include "alto.ly"
 basson		= \include "basson.ly"
 cello		= \include "cello.ly"
@@ -33,11 +33,11 @@ clavecing	= \include "clavecing.ly"
   }
   
   \new Staff  {\recorder }  
- % \new Staff  {\hautbois } 
- % \new Staff  {\violon }
- % \new Staff  {\alto } 	
-  %\new Staff  {\basson }
- % \new Staff  {\cello }
+  \new Staff  {\hautbois } 
+%  \new Staff  {\violon }
+  \new Staff  {\alto } 	
+  \new Staff  {\basson }
+  \new Staff  {\cello }
 	 
  	>>
 		
@@ -52,16 +52,12 @@ clavecing	= \include "clavecing.ly"
 				{\clavecing} 
 		>>
 	>>
+	
+	
  \layout {
  	 \context { \Score
-%      \override RehearsalMark.break-align-symbols = #'(time-signature)
-%      \override RehearsalMark.self-alignment-X = #LEFT
-%      \override TimeSignature.break-align-anchor-alignment = #LEFT
      \override  SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 4)
-     % #'base-shortest-duration permet de faire la partition plus courte.
-     % en mettant  make-moment 1 16), la partition fait 8 pages !
-     
-   } %fin de \context 
+     	 } %fin de \context 
    
   } % fin de \layout 
   

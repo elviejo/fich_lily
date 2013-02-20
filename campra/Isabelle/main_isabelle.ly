@@ -1,17 +1,17 @@
-\include "common_gondoliers.ly" %%reprend tout ce qui est général aux parties séparées
+\include "common_isabelle.ly" %%reprend tout ce qui est général aux parties séparées
 %% et à la "directrice" : définition du papier, des headers, etc.
 
 %\include "bgcolor.ly"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% La musique,
 
-%choeur = \include "choeur_chaconne.ly"
-recorder 	= \include "dessus_gondoliers.ly"
-hautbois 	= \include "hautbois_gondoliers.ly"
-taille 		= \include "violon_gondoliers.ly"
+isabelle 	= \include "isabelle.ly"
+recorder 	= \include "recorder_isabelle.ly"
+%hautbois 	= \include "hautbois_isabelle.ly"
+%violon 		= \include "violon_isabelle.ly"
 %alto = \include "alto.ly"
-basson 		= \include "quinte_gondoliers.ly"
-cello 		= \include "cello_gondoliers.ly"
+%basson 		= \include "basson_isabelle.ly"
+%cello 		= \include "cello_isabelle.ly"
 %clavecind = \include "clavecind.ly"
 %clavecing = \include "clavecing.ly"
 %violon = \include "violon.ly"
@@ -27,17 +27,17 @@ cello 		= \include "cello_gondoliers.ly"
   
    \include "améliorations.ly"
   
-% \new Voice = "one" {
-% \autoBeamOff
-% \choeur }
-% \new Lyrics \lyricsto "one" \texte_one
+ \new Voice = "isabelle" {
+ \autoBeamOff
+ \isabelle }
+ \new Lyrics \lyricsto "isabelle" \texte_one
 
   \new Staff {\recorder } %\bgcolor "(rgb-color 1 0.8 0.6)"\recorder }
-  \new Staff {\hautbois }
-  \new Staff {\taille}
+%  \new Staff {\hautbois }
+%  \new Staff {\violon}
 % \new Staff {\alto}
-  \new Staff {\basson } %\bgcolor "(rgb-color 1 0.8 1.6)"\basson }
-  \new Staff {\cello}
+%  \new Staff {\basson } %\bgcolor "(rgb-color 1 0.8 1.6)"\basson }
+%  \new Staff {\cello}
 
 % \new Staff {\basse }
    >>
@@ -82,9 +82,7 @@ cello 		= \include "cello_gondoliers.ly"
 \layout {
 \context { \RemoveEmptyStaffContext
 \override VerticalAxisGroup #'remove-first = ##t
-%  \once \override Staff.TimeSignature #'stencil = ##f
-%  \override SpacingSpanner #'base-shortest-duration =#(ly:make-moment 1 32)
-%  \override Score.TimeSignature #'break-visibility = #end-of-line-invisible
+
 } %fin de ce \context
 
 

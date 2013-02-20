@@ -1,17 +1,17 @@
-\include "common_gondoliers.ly" %%reprend tout ce qui est général aux parties séparées
+\include "common_.ly" %%reprend tout ce qui est général aux parties séparées
 %% et à la "directrice" : définition du papier, des headers, etc.
 
 %\include "bgcolor.ly"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% La musique,
 
-%choeur = \include "choeur_chaconne.ly"
-recorder 	= \include "dessus_gondoliers.ly"
-hautbois 	= \include "hautbois_gondoliers.ly"
-taille 		= \include "violon_gondoliers.ly"
+choeur 		= \include "soprano.ly"
+recorder 	= \include "dessus.ly"
+hautbois 	= \include "hautbois.ly"
+taille 		= \include "violon.ly"
 %alto = \include "alto.ly"
-basson 		= \include "quinte_gondoliers.ly"
-cello 		= \include "cello_gondoliers.ly"
+basson 		= \include "quinte.ly"
+cello 		= \include "cello.ly"
 %clavecind = \include "clavecind.ly"
 %clavecing = \include "clavecing.ly"
 %violon = \include "violon.ly"

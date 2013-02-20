@@ -57,7 +57,7 @@ voixI =
         \clef "treble"
         \key f \major
         
-        d8 e f g a a, | d4 d d | e8 d e f e d | cis4 a e' | a8 bes a g f-+ e
+        d8^\markup "Piqué" e f g a a, | d4 d d | e8 d e f e d | cis4 a e' | a8 bes a g f-+ e
  %6
  	f4 a, d | d cis8 d e cis | d4 d d | f8 e f g a f |
  	g4 c, g' | a8 bes a g f a |

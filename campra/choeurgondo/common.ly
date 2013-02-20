@@ -1,9 +1,9 @@
 \version "2.17.7"
 
 \header {
-	title		= "Le Carnaval de Venise"
+	title		= "Les Festes Vénitiennes"
 	composer	= \markup \bold \center-column { "André CAMPRA" \small "(1660 - 1744)"}
-	meter 		= \markup {\bold \fontsize #2 "La Vlllanelle"} 
+	meter 		= \markup {\bold \fontsize #2 "Choeur des gondoliers"} 
 %	meter		= \markup {\center-column {"" \fontsize #6 "" "" }}
 	tagline		= \markup {"Partition gravée avec LilyPond (http://lilypond.org)"}	    
 }
@@ -26,7 +26,7 @@ date = #(strftime "%d %m %y" (localtime (current-time)))
 
 }
 	
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 #(set-default-paper-size "a4")
 
 global = {  \numericTimeSignature
@@ -39,7 +39,6 @@ resetBarnum = \context Score \applyContext % pour la numérotation des mesures
 
   {
          \override Score.BarNumber.break-visibility =#end-of-line-invisible
-
          \resetBarnum
          \override  Score.BarNumber.self-alignment-X = #LEFT
   }

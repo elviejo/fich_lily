@@ -35,9 +35,6 @@
 	c es d c | b2 g4 g' | f2-+ g | c,4. b8 c4 d | 
 	es2\mark \markup \bold \column {"             On reprend le 2è Rigaudon" 
 	"     et ensuite le Premier Rigaudon"} d-+ c2. \bar ":|."
-		
-		
-
 				
 
 } %fin choeur
@@ -51,14 +48,6 @@ texte_one =	\lyricmode
 	Que quel- qu-o- ra- ge-à tout mo- ment vient a- gi- ter,
 	Mal- gré ces maux le cal- me de l'in- di- fé- ren- ce 
 	Est en- cor plus, cent fois à re- dou- ter.
-	 	 
-	 	 
-	 	 
-	 	 
-	 	 
-	 	 
-	 	 
-	 	 
 	 	 
 }     
 

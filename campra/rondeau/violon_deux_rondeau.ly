@@ -30,7 +30,15 @@
 %40
 	e e b | c a4. a8 | a2 d4 | d g,4. g8 | g2 c4 | 
 %45
-	c d4. d8 | d2 e4 | d4 g,4. g8 | g4 g4. g8 | g4 r2		
+	c d4. d8 | d2 e4 | d4 g,4. g8 | g4 g4. g8 | g4 
+	
+%on reprend à la mes. 33 (r2)
+	c4 d | e c b |
+	c8 d e f g4 | b, c a | b a cis | d4. e8 d c | b4 c d |
+%40
+	e4 e b | c a4. a8 | a2 d4 | d g,4. g8 | g2 c4 |
+%45
+	c4 d4. d8 | d2 e4 | d g,4. g8 | g4 g4. g8 | g4 r2
 	
   
   }

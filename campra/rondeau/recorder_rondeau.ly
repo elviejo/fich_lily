@@ -22,7 +22,7 @@
 	d4-+ c f~ | f8 e d e f g | e4-+ g c, | 
 	d e8_\markup \italic "doux" (f) g (c,) | d4-+ _\markup \italic "fort" c f~ |
 %16
-	f8 d d4.-+ c8 | c4^\markup \bold "Fin"\bar "||" e d-+ |
+	f8 d d4.-+ c8 | c4^\markup \bold \italic "Fin"\bar "||" e d-+ |
 	c8 (d) e_\markup \italic "doux" (f) d (e) | 
 	c_\markup \italic "fort" (d) e (f) g (e) | a4 a g8 a | 
 %21
@@ -42,7 +42,7 @@
 	d4-+ c f~ | f8 e d e f g | e4-+ g c, | 
 	d e8_\markup \italic "doux" (f) g (c,) | d4-+ _\markup \italic "fort" c f~ |
 %16
-	f8 d d4.-+ c8 | c4 e d-+ |
+	f8 d d4.-+ c8 | c4^\markup \bold \italic "fin" e d-+ |
 	c8 (d) e_\markup \italic "doux" (f) d (e) | 
 	c_\markup \italic "fort" (d) e (f) g (e) | a4 a g8 a | 
 %21
@@ -52,7 +52,7 @@
 	d8 g a4 b-+ | c g a8 bes |
 %31
 	a g f e d c | b8. (c16) c4.-+ b8 | 
-	c4 a' gis-+ | a a, b-+
+	c4 a' gis-+ \break| a a, b-+
 %35 après reprise
 	c4 a8 b c d | e4 e  d-+ | e a a8 g | f e d c b c | gis4-+ a b |
 %40

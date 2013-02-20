@@ -6,7 +6,7 @@
 \relative c { 
 	\set Staff.instrumentName = \markup { \column { "Quinte" } }
 	\set Staff.midiInstrument = "bassoon"
-	\set Staff.shortInstrumentName =#"Qvn."
+	\set Staff.shortInstrumentName =#"Bsn"
 	\set Staff.printKeyCancellation = ##f
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-6 . 6)
 	\override TextScript.padding = #2.0
@@ -36,7 +36,7 @@
 %415
 	d, \set fontSize = #0 
 	\revert  Stem #'length %=#6.0
-	d' a  | d a' f | e e d | d a4. a8 | a4 d a | 
+	 d' a  | d a' f | e e d | d a4. a8 | a4 d a | 
 	d a' f | e e d | d a4. a8 | 
 %423
 	a4 a e' | a, c a | b b e | c g4. g8 | g4 c d | e d c | a e' a, | b4 b4. a8

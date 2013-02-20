@@ -32,9 +32,18 @@
 	c4 e d | c e, e | e2 r8 f | g e a4. b8 |
 	gis4 e a | a f4. f8 | e4 a gis |
 %40
-	a 4 gis4. a8 | a2 c,4 | d8 e f g a4 | g2 b,4 | c8 d e f g e | 
+	a 4 gis4. a8 | a2 c,4 | d8 e f g a4 | g2 b,4 | 
+	c8 d e f g e | 
 %45
-	f4 a d | b2-+ c4 | g2 g,4 | c d g | e r2 
+	f4 a d | b2-+ c4 | g2 g,4 | c d g | e 
+	
+%reprise à la mes.33 r2
+	e' d |
+	c e, e | e2 e8 f | g e a4. b8 | gis4 e a | a f4. f8 | e4 a gis |
+%40
+	a4 gis4. a8 | a2 c,4 | d8 e f g a4 | g2 b,4 | c8 d e f g e |
+	%45
+	f4 a d | b2-+ c4 g2 g,4 | c d g | e r2
 		
 
 	

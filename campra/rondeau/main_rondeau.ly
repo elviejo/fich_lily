@@ -21,14 +21,14 @@ cello		= \include "cello_rondeau.ly"
   
 \score {
 	
-  <<  	   \new StaffGroup << \include "améliorations.ly"
+	<<  	   \new StaffGroup << {\include "améliorations.ly" }
    
 % \new Voice = "one"  {
 %  		 	 \autoBeamOff
 %  		 \choeur }
 %  		 \new Lyrics \lyricsto "one" \texte_one   	
 
-  \new Staff {\recorder } % bgcolor "(rgb-color 1 0.8 0.6)"\recorder }
+  \new Staff {\recorder }
 %  \new Staff  {\hautbois }  
   \new Staff  {\basson}
   \new Staff  {\violon_un} 
