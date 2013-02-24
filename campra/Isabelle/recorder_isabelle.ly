@@ -15,6 +15,7 @@
                 \key c \major
                 	
                 \set Score.currentBarNumber = #615
+      %          \set fontSize = #-3
 
 	r4 r8 r4 g8 a4 g8 a4 b8 | c4 g8 g4 g'8 f4-+ e8 f g f | 
 	e4-+ c8 c4 g'8 a f g a bes a

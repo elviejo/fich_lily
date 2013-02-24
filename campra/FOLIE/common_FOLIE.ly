@@ -3,7 +3,7 @@
 \header {
 	title		= "Le Carnaval de Venise"
 	composer	= \markup \bold \center-column { "André CAMPRA" \small "(1660 - 1744)"}
-	meter 		= \markup {\bold \fontsize #2 "Isabelle sur un balcon"} 
+	meter 		= \markup {\bold \fontsize #2 "Air de LA FOLIE"} 
 %	meter		= \markup {\center-column {"" \fontsize #6 "" "" }}
 	tagline		= \markup {"Partition gravée avec LilyPond (http://lilypond.org)"}	    
 }
@@ -26,7 +26,7 @@ date = #(strftime "%d %m %y" (localtime (current-time)))
 
 }
 	
-#(set-global-staff-size 16)
+#(set-global-staff-size 18)
 #(set-default-paper-size "a4")
 
 global = {  \numericTimeSignature

@@ -7,11 +7,11 @@
 
 isabelle 	= \include "isabelle.ly"
 recorder 	= \include "recorder_isabelle.ly"
-%hautbois 	= \include "hautbois_isabelle.ly"
-%violon 		= \include "violon_isabelle.ly"
+hautbois 	= \include "hautbois_isabelle.ly"
+violon 		= \include "violon_isabelle.ly"
 %alto = \include "alto.ly"
-%basson 		= \include "basson_isabelle.ly"
-%cello 		= \include "cello_isabelle.ly"
+basson 		= \include "basson_isabelle.ly"
+cello 		= \include "cello_isabelle.ly"
 %clavecind = \include "clavecind.ly"
 %clavecing = \include "clavecing.ly"
 %violon = \include "violon.ly"
@@ -23,21 +23,21 @@ recorder 	= \include "recorder_isabelle.ly"
   
 \score {
 
-  << \new StaffGroup <<
+ <<
   
    \include "améliorations.ly"
   
- \new Voice = "isabelle" {
- \autoBeamOff
- \isabelle }
- \new Lyrics \lyricsto "isabelle" \texte_one
+   	\new Voice = "isabelle" { \autoBeamOff \isabelle }
+   	\new Lyrics \lyricsto "isabelle" \texte_one
+   	
+     \new StaffGroup <<	
 
   \new Staff {\recorder } %\bgcolor "(rgb-color 1 0.8 0.6)"\recorder }
-%  \new Staff {\hautbois }
-%  \new Staff {\violon}
+  \new Staff {\hautbois }
+  \new Staff {\violon}
 % \new Staff {\alto}
-%  \new Staff {\basson } %\bgcolor "(rgb-color 1 0.8 1.6)"\basson }
-%  \new Staff {\cello}
+  \new Staff {\basson } %\bgcolor "(rgb-color 1 0.8 1.6)"\basson }
+  \new Staff {\cello}
 
 % \new Staff {\basse }
    >>
@@ -91,13 +91,13 @@ recorder 	= \include "recorder_isabelle.ly"
     \override StaffGrouper.staff-staff-spacing.basic-distance = #1
    } %fin de ce \context
    
-   \context { \Staff 
-	\override TimeSignature #'style = #'single-digit } 
+%   \context { \Staff 
+%	\override TimeSignature #'style = #'single-digit } 
 
 
 }% fin de \layout
 
   
-% \midi { }
+ \midi { }
   
 } % fin de \score

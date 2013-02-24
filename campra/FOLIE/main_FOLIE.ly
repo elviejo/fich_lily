@@ -1,16 +1,16 @@
-\include "common_isabelle.ly" %%reprend tout ce qui est général aux parties séparées
+\include "common_FOLIE.ly" %%reprend tout ce qui est général aux parties séparées
 %% et à la "directrice" : définition du papier, des headers, etc.
 
 %\include "bgcolor.ly"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% La musique,
 
-isabelle 	= \include "isabelle.ly"
-recorder 	= \include "recorder_isabelle.ly"
-%hautbois 	= \include "hautbois_isabelle.ly"
-%violon 		= \include "violon_isabelle.ly"
+folie	 	= \include "folie_FOLIE.ly"
+%recorder 	= \include "recorder_isabelle.ly"
+hautbois 	= \include "hautbois_FOLIE.ly"
+violon 		= \include "violon_FOLIE.ly"
 %alto = \include "alto.ly"
-%basson 		= \include "basson_isabelle.ly"
+basson 		= \include "basson_FOLIE.ly"
 %cello 		= \include "cello_isabelle.ly"
 %clavecind = \include "clavecind.ly"
 %clavecing = \include "clavecing.ly"
@@ -23,45 +23,46 @@ recorder 	= \include "recorder_isabelle.ly"
   
 \score {
 
-  << \new StaffGroup <<
+ <<
   
    \include "améliorations.ly"
   
- \new Voice = "isabelle" {
- \autoBeamOff
-  }
- \new Lyrics \lyricsto "isabelle" \texte_one
+   	\new Voice = "folie" { \autoBeamOff \folie }
+   	\new Lyrics \lyricsto "folie" \texte_one
+   	
+     \new StaffGroup <<	
 
-  \new Staff {\recorder } %\bgcolor "(rgb-color 1 0.8 0.6)"\recorder }
-%  \new Staff {\hautbois }
-%  \new Staff {\violon}
+%  \new Staff {\recorder } %\bgcolor "(rgb-color 1 0.8 0.6)"\recorder }
+	\new Staff {\violon}
+	\new Staff {\hautbois }
+  
 % \new Staff {\alto}
-%  \new Staff {\basson } %\bgcolor "(rgb-color 1 0.8 1.6)"\basson }
+%  	\new Staff {\basson } %\bgcolor "(rgb-color 1 0.8 1.6)"\basson }
 %  \new Staff {\cello}
 
 % \new Staff {\basse }
-   >>
+ %  >>
    
-% \new Staff \with { %% colorisation de cette portée
-% \override StaffSymbol.stencil = #(lambda (grob)
-% (let* ((staff (ly:staff-symbol::print grob))
-% (X-ext (ly:stencil-extent staff X))
-% (Y-ext (ly:stencil-extent staff Y)))
-% (set! Y-ext (cons
-% (- (car Y-ext) 0)
-% (+ (cdr Y-ext) 0)))
-% (ly:grob-set-property! grob 'layer -10)
-% (ly:stencil-add
-% (ly:make-stencil (list 'color (rgb-color 1 0.8 0.6)
-% (ly:stencil-expr (ly:round-filled-box X-ext Y-ext 0))
-% X-ext Y-ext))
-% staff)))
-% }
-% { \quinte }
+ \new Staff \with { %% colorisation de cette portée
+ \override StaffSymbol.stencil = #(lambda (grob)
+ (let* ((staff (ly:staff-symbol::print grob))
+ (X-ext (ly:stencil-extent staff X))
+ (Y-ext (ly:stencil-extent staff Y)))
+ (set! Y-ext (cons
+ (- (car Y-ext) 0)
+ (+ (cdr Y-ext) 0)))
+ (ly:grob-set-property! grob 'layer -10)
+ (ly:stencil-add
+ (ly:make-stencil (list 'color (rgb-color 1 0.8 0.6)
+ (ly:stencil-expr (ly:round-filled-box X-ext Y-ext 0))
+ X-ext Y-ext))
+ staff)))
+ }
+ { \basson }
 
  
-% \new Staff {\basse }
-%>>
+% \new Staff {\cello }
+>>
 
 
 
@@ -91,13 +92,13 @@ recorder 	= \include "recorder_isabelle.ly"
     \override StaffGrouper.staff-staff-spacing.basic-distance = #1
    } %fin de ce \context
    
-   \context { \Staff 
-	\override TimeSignature #'style = #'single-digit } 
+%   \context { \Staff 
+%	\override TimeSignature #'style = #'single-digit } 
 
 
 }% fin de \layout
 
   
-% \midi { }
+ \midi { }
   
 } % fin de \score
